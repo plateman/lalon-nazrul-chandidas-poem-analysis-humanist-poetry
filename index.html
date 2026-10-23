@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মানবতার কাব্য ও গান | Anthology of Humanist Poetry & Songs</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Bengali & English Literary Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        bnSerif: ['"Noto Serif Bengali"', 'serif'],
+                        bnSans: ['"Hind Siliguri"', 'sans-serif'],
+                        enSerif: ['"Playfair Display"', 'serif'],
+                        enSans: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        parchment: {
+                            50: '#fdfbf7',
+                            100: '#f9f4eb',
+                            200: '#f1e6d2',
+                            300: '#e5d1b0',
+                            800: '#2b231d',
+                            900: '#1c1612'
+                        },
+                        terracotta: {
+                            500: '#c85a32',
+                            600: '#b04822',
+                            700: '#8f3718'
+                        },
+                        royal: {
+                            500: '#0f766e',
+                            600: '#115e59',
+                            700: '#134e4a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Literary Aesthetics & Smooth Transitions */
+        body {
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .poem-verse {
+            font-family: 'Noto Serif Bengali', serif;
+            line-height: 2;
+            letter-spacing: 0.01em;
+        }
+        .serif-heading {
+            font-family: 'Noto Serif Bengali', 'Playfair Display', serif;
+        }
+        /* Subtle Decorative Pattern */
+        .alpona-bg {
+            background-image: radial-gradient(rgba(200, 90, 50, 0.08) 1.5px, transparent 1.5px), radial-gradient(rgba(15, 118, 110, 0.06) 1.5px, transparent 1.5px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+        }
+        .dark .alpona-bg {
+            background-image: radial-gradient(rgba(245, 158, 11, 0.07) 1.5px, transparent 1.5px), radial-gradient(rgba(20, 184, 166, 0.05) 1.5px, transparent 1.5px);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.04);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(180, 120, 80, 0.4);
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(180, 120, 80, 0.7);
+        }
+        /* Font size scaling classes controlled by JS */
+        .scale-sm .poem-verse { font-size: 0.975rem; line-height: 1.85; }
+        .scale-sm .analysis-text { font-size: 0.925rem; line-height: 1.7; }
+        
+        .scale-md .poem-verse { font-size: 1.125rem; line-height: 2.05; }
+        .scale-md .analysis-text { font-size: 1.025rem; line-height: 1.8; }
+        
+        .scale-lg .poem-verse { font-size: 1.3rem; line-height: 2.15; }
+        .scale-lg .analysis-text { font-size: 1.15rem; line-height: 1.9; }
+    </style>
+</head>
+
+<body class="bg-parchment-50 text-stone-800 dark:bg-stone-950 dark:text-stone-100 alpona-bg min-h-screen flex flex-col scale-md">
+
+    <!-- ================= STICKY HEADER / NAVIGATION ================= -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-parchment-50/90 dark:bg-stone-900/90 border-b border-amber-900/10 dark:border-stone-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+                
+                <!-- Brand Logo & Title -->
+                <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-amber-600 via-terracotta-600 to-rose-700 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                        <!-- Ektara & Quill SVG Icon -->
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v13m0 0a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-4-9l4-4 4 4M9 9h6" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 id="nav-title" class="serif-heading text-lg sm:text-xl font-bold text-stone-900 dark:text-amber-100 tracking-tight leading-tight">
+                            মানবতার কাব্য ও গান
+                        </h1>
+                        <p id="nav-subtitle" class="text-xs text-stone-500 dark:text-stone-400">
+                            চণ্ডীদাস • ফকির লালন শাহ • কাজী নজরুল ইসলাম
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Controls: Language Switcher, Font Size, Index Table, Dark Mode -->
+                <div class="flex items-center flex-wrap gap-2 sm:gap-3">
+                    
+                    <!-- Prominent Two-Language Toggle ("শুধু বাংলা" | "English") -->
+                    <div class="inline-flex rounded-xl p-1 bg-stone-200/80 dark:bg-stone-800 border border-stone-300/70 dark:border-stone-700 shadow-inner" role="group" aria-label="Language Switcher">
+                        <button id="btn-lang-bn" onclick="setLanguage('bn')" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 bg-terracotta-600 text-white shadow-sm">
+                            শুধু বাংলা
+                        </button>
+                        <button id="btn-lang-en" onclick="setLanguage('en')" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white">
+                            English
+                        </button>
+                    </div>
+
+                    <!-- Font Size Control (A-, A, A+) -->
+                    <div class="hidden sm:inline-flex items-center rounded-xl bg-stone-200/70 dark:bg-stone-800 p-1 border border-stone-300/60 dark:border-stone-700" title="অক্ষরের আকার পরিবর্তন / Change Font Size">
+                        <button onclick="setFontSize('sm')" id="font-sm" class="px-2 py-1 rounded-lg text-xs font-bold text-stone-600 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-700 transition">অ-</button>
+                        <button onclick="setFontSize('md')" id="font-md" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-white dark:bg-stone-700 text-amber-700 dark:text-amber-300 shadow-sm transition">অ</button>
+                        <button onclick="setFontSize('lg')" id="font-lg" class="px-2 py-1 rounded-lg text-sm font-bold text-stone-600 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-700 transition">অ+</button>
+                    </div>
+
+                    <!-- Quick Index Button -->
+                    <button onclick="toggleIndexModal(true)" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs sm:text-sm font-medium bg-amber-100/90 dark:bg-amber-950/70 text-amber-900 dark:text-amber-200 border border-amber-300/70 dark:border-amber-800/70 hover:bg-amber-200/80 dark:hover:bg-amber-900/60 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+                        <span id="btn-index-text">সূচিপত্র</span>
+                    </button>
+
+                    <!-- Theme Toggle (Light/Dark) -->
+                    <button onclick="toggleTheme()" id="theme-toggle-btn" class="p-2 rounded-xl bg-stone-200/70 dark:bg-stone-800 text-stone-700 dark:text-amber-300 border border-stone-300/60 dark:border-stone-700 hover:bg-stone-300/70 dark:hover:bg-stone-700 transition" aria-label="Toggle Dark Mode">
+                        <!-- Sun Icon (shown in dark mode) -->
+                        <svg id="icon-sun" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <!-- Moon Icon (shown in light mode) -->
+                        <svg id="icon-moon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO BANNER ================= -->
+    <section class="relative overflow-hidden border-b border-amber-900/10 dark:border-stone-800 bg-gradient-to-b from-amber-50/70 via-parchment-100/50 to-transparent dark:from-stone-900 dark:via-stone-900/50 dark:to-transparent py-8 sm:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center space-y-4">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-terracotta-500/10 dark:bg-amber-500/10 border border-terracotta-500/20 dark:border-amber-500/20 text-terracotta-700 dark:text-amber-300 text-xs sm:text-sm font-medium">
+                    <span class="w-2 h-2 rounded-full bg-terracotta-500 animate-pulse"></span>
+                    <span id="hero-badge">চণ্ডীদাস, লালন ও নজরুলের মানবতাবাদী দর্শন ও সাহিত্য সংকলন</span>
+                </div>
+
+                <h2 id="hero-heading" class="serif-heading text-2xl sm:text-4xl lg:text-5xl font-bold text-stone-900 dark:text-amber-50 leading-tight">
+                    “সবার উপরে মানুষ সত্য, তাহার উপরে নাই”
+                </h2>
+
+                <p id="hero-description" class="text-sm sm:text-base lg:text-lg text-stone-600 dark:text-stone-300 leading-relaxed max-w-3xl mx-auto">
+                    মধ্যযুগের চণ্ডীদাস থেকে শুরু করে বাউল সম্রাট ফকির লালন শাহ এবং বিদ্রোহী কবি কাজী নজরুল ইসলাম—বাংলা সাহিত্যের এই তিন মহাপ্রাণ মানুষের হৃদয়কেই স্রষ্টার পবিত্রতম মন্দির ও মসজিদ বলে ঘোষণা করেছেন। নিচে আলোচিত ১৫টি অমর পদ, গান ও কবিতার মূল পাঠ এবং গভীর দার্শনিক ব্যাখ্যা ও বিশ্লেষণ তুলে ধরা হলো।
+                </p>
+
+                <!-- Three Iconic Quotes Strip -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-4 text-left">
+                    <div onclick="filterByPoet('chandidas')" class="cursor-pointer p-3.5 rounded-2xl bg-white/80 dark:bg-stone-900/80 border border-amber-200/80 dark:border-stone-800 hover:border-amber-500 transition shadow-sm">
+                        <p class="poem-verse text-xs sm:text-sm font-semibold text-amber-900 dark:text-amber-300">“মানুষের সেবা বিনে সকলই যে ছারখার।”</p>
+                        <p id="quote-author-1" class="text-xs text-stone-500 dark:text-stone-400 mt-1">— কবি চণ্ডীদাস (১টি অমর পদ)</p>
+                    </div>
+                    <div onclick="filterByPoet('lalon')" class="cursor-pointer p-3.5 rounded-2xl bg-white/80 dark:bg-stone-900/80 border border-amber-200/80 dark:border-stone-800 hover:border-amber-500 transition shadow-sm">
+                        <p class="poem-verse text-xs sm:text-sm font-semibold text-teal-900 dark:text-teal-300">“একবার আপনারে চিনলে পরে যায় অচেনারে চেনা॥”</p>
+                        <p id="quote-author-2" class="text-xs text-stone-500 dark:text-stone-400 mt-1">— ফকির লালন শাহ (৮টি তত্ত্বগান)</p>
+                    </div>
+                    <div onclick="filterByPoet('nazrul')" class="cursor-pointer p-3.5 rounded-2xl bg-white/80 dark:bg-stone-900/80 border border-amber-200/80 dark:border-stone-800 hover:border-amber-500 transition shadow-sm">
+                        <p class="poem-verse text-xs sm:text-sm font-semibold text-rose-900 dark:text-rose-300">“মানুষ এনেছে গ্রন্থ;—গ্রন্থ আনেনি মানুষ কোনো!”</p>
+                        <p id="quote-author-3" class="text-xs text-stone-500 dark:text-stone-400 mt-1">— কাজী নজরুল ইসলাম (৬টি কবিতা ও গান)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT CONTAINER ================= -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 space-y-10 flex-grow w-full">
+
+        <!-- 1. POET PROFILES SECTION (কবি পরিচিতি ও প্রতিকৃতি) -->
+        <section aria-labelledby="poets-heading">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-5 gap-2">
+                <div>
+                    <h3 id="poets-heading" class="serif-heading text-xl sm:text-2xl font-bold text-stone-900 dark:text-amber-100">
+                        মহান তিন কবি ও সাধক পরিচিতি
+                    </h3>
+                    <p id="poets-subheading" class="text-xs sm:text-sm text-stone-600 dark:text-stone-400">
+                        যেকোনো কবির কার্ডে ক্লিক করলে তাঁর রচিত পদ, গান বা কবিতাগুলো আলাদাভাবে দেখা যাবে
+                    </p>
+                </div>
+                <button onclick="filterByPoet('all')" id="btn-reset-poet" class="self-start sm:self-auto text-xs font-semibold text-terracotta-600 dark:text-amber-400 hover:underline">
+                    সকল কবির রচনা একসাথে দেখুন (১৫টি) →
+                </button>
+            </div>
+
+            <div id="poets-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </section>
+
+        <!-- 2. INTERACTIVE FILTER, SEARCH & VIEW BAR -->
+        <section class="sticky top-[61px] sm:top-[69px] z-30 bg-parchment-100/95 dark:bg-stone-900/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-amber-900/15 dark:border-stone-800 shadow-md">
+            <div class="flex flex-col lg:flex-row gap-3 items-stretch lg:items-center justify-between">
+                
+                <!-- Poet Filter Tabs -->
+                <div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 no-scrollbar" id="poet-filter-tabs">
+                    <button onclick="filterByPoet('all')" data-poet="all" class="poet-tab shrink-0 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-stone-900 text-white dark:bg-amber-500 dark:text-stone-950 shadow-sm">
+                        সকল রচনা (১৫)
+                    </button>
+                    <button onclick="filterByPoet('chandidas')" data-poet="chandidas" class="poet-tab shrink-0 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-white/80 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-amber-100 dark:hover:bg-stone-700">
+                        কবি চণ্ডীদাস (১)
+                    </button>
+                    <button onclick="filterByPoet('lalon')" data-poet="lalon" class="poet-tab shrink-0 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-white/80 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-amber-100 dark:hover:bg-stone-700">
+                        ফকির লালন শাহ (৮)
+                    </button>
+                    <button onclick="filterByPoet('nazrul')" data-poet="nazrul" class="poet-tab shrink-0 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-white/80 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-amber-100 dark:hover:bg-stone-700">
+                        কাজী নজরুল ইসলাম (৬)
+                    </button>
+                </div>
+
+                <!-- Search Input + Theme Filter + Layout Switcher -->
+                <div class="flex flex-wrap sm:flex-nowrap items-center gap-2">
+                    <!-- Search Box -->
+                    <div class="relative flex-grow sm:w-64">
+                        <svg class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                        <input
+                            type="text"
+                            id="search-input"
+                            oninput="handleSearch(this.value)"
+                            placeholder="কবিতা, চরণ বা বিষয় খুঁজুন..."
+                            class="w-full pl-9 pr-8 py-2 rounded-xl text-xs sm:text-sm bg-white dark:bg-stone-800 border border-stone-300/80 dark:border-stone-700 text-stone-800 dark:text-stone-100 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-terracotta-500"
+                        />
+                        <button id="clear-search-btn" onclick="clearSearch()" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 dark:hover:text-stone-200">
+                            ✕
+                        </button>
+                    </div>
+
+                    <!-- Theme Category Dropdown -->
+                    <select id="theme-select" onchange="handleThemeFilter(this.value)" class="px-3 py-2 rounded-xl text-xs sm:text-sm bg-white dark:bg-stone-800 border border-stone-300/80 dark:border-stone-700 text-stone-700 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-terracotta-500">
+                        <option value="all" id="opt-theme-all">সকল তত্ত্ব ও বিষয়</option>
+                        <option value="humanism" id="opt-theme-humanism">মানবধর্ম ও সাম্যবাদ</option>
+                        <option value="self" id="opt-theme-self">আত্মতত্ত্ব ও আত্মোপলব্ধি</option>
+                        <option value="body" id="opt-theme-body">দেহতত্ত্ব ও রূপক</option>
+                        <option value="antifanatic" id="opt-theme-antifanatic">গোঁড়ামি ও জাতপাত বিরোধী</option>
+                    </select>
+
+                    <!-- Layout Toggle (Grid vs Single-Column Reader) -->
+                    <div class="hidden md:inline-flex rounded-xl bg-white dark:bg-stone-800 p-1 border border-stone-300/80 dark:border-stone-700">
+                        <button onclick="setLayout('grid')" id="layout-grid-btn" class="p-1.5 rounded-lg bg-amber-100 dark:bg-stone-700 text-amber-900 dark:text-amber-300 transition" title="Grid View">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                        </button>
+                        <button onclick="setLayout('reader')" id="layout-reader-btn" class="p-1.5 rounded-lg text-stone-500 dark:text-stone-400 hover:text-stone-800 transition" title="Book Reader View">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Font Size & Active Count Bar -->
+            <div class="flex items-center justify-between pt-2.5 mt-2.5 border-t border-stone-200/70 dark:border-stone-800 text-xs text-stone-500 dark:text-stone-400">
+                <span id="results-counter">মোট ১৫টি অমর রচনা প্রদর্শিত হচ্ছে</span>
+                <div class="flex sm:hidden items-center gap-1">
+                    <span id="mobile-font-label">ফন্ট:</span>
+                    <button onclick="setFontSize('sm')" class="px-2 py-0.5 rounded bg-stone-200 dark:bg-stone-800 font-bold">অ-</button>
+                    <button onclick="setFontSize('md')" class="px-2 py-0.5 rounded bg-stone-200 dark:bg-stone-800 font-bold">অ</button>
+                    <button onclick="setFontSize('lg')" class="px-2 py-0.5 rounded bg-stone-200 dark:bg-stone-800 font-bold">অ+</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. POEMS & SONGS ANTHOLOGY GRID -->
+        <section aria-live="polite">
+            <div id="poems-container" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Dynamically populated by JS -->
+            </div>
+
+            <!-- Empty State when no search matches -->
+            <div id="empty-state" class="hidden text-center py-16 px-4 rounded-3xl bg-white/70 dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-amber-100 dark:bg-stone-800 flex items-center justify-center text-amber-700 dark:text-amber-400">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h4 id="empty-title" class="serif-heading text-xl font-bold text-stone-800 dark:text-stone-100 mb-2">কোনো কবিতা বা গান খুঁজে পাওয়া যায়নি</h4>
+                <p id="empty-desc" class="text-sm text-stone-500 dark:text-stone-400 mb-4">অন্য কোনো শব্দ দিয়ে খুঁজুন অথবা ফিল্টার রিসেট করুন।</p>
+                <button onclick="resetAllFilters()" id="empty-reset-btn" class="px-4 py-2 rounded-xl bg-terracotta-600 text-white text-sm font-semibold hover:bg-terracotta-700 transition">
+                    সকল ফিল্টার মুছে ফেলুন
+                </button>
+            </div>
+        </section>
+
+        <!-- 4. COMPARATIVE PHILOSOPHICAL SYNTHESIS SECTION -->
+        <section class="rounded-3xl bg-gradient-to-br from-amber-100/80 via-parchment-100 to-teal-50/60 dark:from-stone-900 dark:via-stone-900 dark:to-stone-800/80 p-6 sm:p-8 border border-amber-300/60 dark:border-stone-700 shadow-sm">
+            <h3 id="synthesis-title" class="serif-heading text-xl sm:text-2xl font-bold text-stone-900 dark:text-amber-100 mb-3">
+                তুলনামূলক দার্শনিক মেলবন্ধন: চণ্ডীদাস, লালন ও নজরুল
+            </h3>
+            <p id="synthesis-intro" class="analysis-text text-stone-700 dark:text-stone-300 mb-6">
+                ভিডিওর মূল আলোচনায় দেখানো হয়েছে যে, কাব্যিক রূপক ও আধ্যাত্মিক দেহতত্ত্বকে আক্ষরিক অর্থে বিচার করলে বাংলা সাহিত্যের শ্রেষ্ঠ মানবতাবাদী কবিদের দর্শনকে ভুল বোঝা হয়। নিচে এই তিন মহান সাধক-কবির চিন্তার অপূর্ব ঐক্য তুলে ধরা হলো:
+            </p>
+            <div id="synthesis-cards" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Populated by JS based on active language -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= QUICK REFERENCE INDEX MODAL ================= -->
+    <div id="index-modal" class="fixed inset-0 z-50 hidden bg-stone-950/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
+        <div class="bg-parchment-50 dark:bg-stone-900 border border-stone-300 dark:border-stone-700 rounded-3xl max-w-5xl w-full max-h-[88vh] flex flex-col shadow-2xl overflow-hidden">
+            <div class="flex items-center justify-between px-5 py-4 border-b border-stone-200 dark:border-stone-800 bg-parchment-100 dark:bg-stone-950">
+                <div>
+                    <h3 id="modal-index-title" class="serif-heading text-lg sm:text-xl font-bold text-stone-900 dark:text-amber-100">
+                        সম্পূর্ণ সূচিপত্র (১৫টি পদ, গান ও কবিতা)
+                    </h3>
+                    <p id="modal-index-subtitle" class="text-xs text-stone-500 dark:text-stone-400">
+                        যেকোনো শিরোনামে ক্লিক করলে সরাসরি সেই কবিতা ও বিশ্লেষণে নিয়ে যাবে
+                    </p>
+                </div>
+                <button onclick="toggleIndexModal(false)" class="p-2 rounded-xl bg-stone-200/80 dark:bg-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-300 transition">
+                    ✕
+                </button>
+            </div>
+            <div class="overflow-y-auto p-4 sm:p-6">
+                <div class="overflow-x-auto rounded-2xl border border-stone-200 dark:border-stone-800">
+                    <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                        <thead>
+                            <tr class="bg-amber-100/70 dark:bg-stone-800 text-stone-800 dark:text-amber-200">
+                                <th class="py-3 px-3 font-bold">#</th>
+                                <th id="th-title" class="py-3 px-3 font-bold">কবিতা / গানের শিরোনাম</th>
+                                <th id="th-poet" class="py-3 px-3 font-bold">কবি / গীতিকার</th>
+                                <th id="th-genre" class="py-3 px-3 font-bold">ধরন / উৎস</th>
+                                <th id="th-time" class="py-3 px-3 font-bold">ভিডিও টাইমস্ট্যাম্প</th>
+                            </tr>
+                        </thead>
+                        <tbody id="index-table-body" class="divide-y divide-stone-200 dark:divide-stone-800 bg-white dark:bg-stone-900">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= FOCUSED READER MODAL ================= -->
+    <div id="reader-modal" class="fixed inset-0 z-50 hidden bg-stone-950/80 backdrop-blur-sm flex items-center justify-center p-2 sm:p-6">
+        <div class="bg-parchment-50 dark:bg-stone-900 border border-amber-300/60 dark:border-stone-700 rounded-3xl max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between px-5 py-3.5 border-b border-stone-200 dark:border-stone-800 bg-parchment-100 dark:bg-stone-950">
+                <div class="flex items-center gap-3 min-w-0">
+                    <span id="reader-badge" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-terracotta-600 text-white shrink-0">#1</span>
+                    <h3 id="reader-title" class="serif-heading text-base sm:text-xl font-bold text-stone-900 dark:text-amber-100 truncate"></h3>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                    <button id="reader-copy-btn" onclick="copyCurrentModalPoem()" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-amber-100 dark:bg-stone-800 text-amber-900 dark:text-amber-200 hover:bg-amber-200 transition">
+                        কপি করুন
+                    </button>
+                    <button onclick="closeReaderModal()" class="p-2 rounded-xl bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-300 transition">
+                        ✕
+                    </button>
+                </div>
+            </div>
+            <!-- Modal Scrollable Content -->
+            <div id="reader-body" class="overflow-y-auto p-5 sm:p-8 space-y-6">
+                <!-- Populated by JS -->
+            </div>
+            <!-- Modal Footer Navigation -->
+            <div class="flex items-center justify-between px-5 py-3 border-t border-stone-200 dark:border-stone-800 bg-parchment-100 dark:bg-stone-950">
+                <button id="reader-prev-btn" onclick="navigateModal(-1)" class="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-700 hover:bg-amber-50 dark:hover:bg-stone-700 transition">
+                    ← পূর্ববর্তী রচনা
+                </button>
+                <span id="reader-counter" class="text-xs font-medium text-stone-500 dark:text-stone-400">১ / ১৫</span>
+                <button id="reader-next-btn" onclick="navigateModal(1)" class="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-700 hover:bg-amber-50 dark:hover:bg-stone-700 transition">
+                    পরবর্তী রচনা →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= CUSTOM TOAST NOTIFICATION ================= -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 bg-stone-900 dark:bg-amber-400 text-white dark:text-stone-950 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+        <svg class="w-5 h-5 text-emerald-400 dark:text-emerald-800 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        <span id="toast-message">ক্লিপবোর্ডে কপি করা হয়েছে!</span>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-amber-900/10 dark:border-stone-800 bg-parchment-100/80 dark:bg-stone-950 py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-stone-600 dark:text-stone-400">
+            <p id="footer-left">
+                মানবতার কাব্য ও গান সংকলন • কবি চণ্ডীদাস, ফকির লালন শাহ ও কাজী নজরুল ইসলাম
+            </p>
+            <div class="flex items-center gap-4">
+                <button onclick="setLanguage('bn')" class="hover:text-terracotta-600 dark:hover:text-amber-400 font-medium">শুধু বাংলা</button>
+                <span>•</span>
+                <button onclick="setLanguage('en')" class="hover:text-terracotta-600 dark:hover:text-amber-400 font-medium">English Version</button>
+                <span>•</span>
+                <a href="#" class="hover:text-terracotta-600 dark:hover:text-amber-400 font-medium" id="footer-top-link">উপরে যান ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= APPLICATION DATA & LOGIC ================= -->
+    <script>
+        // ---------------------------------------------------------
+        // 1. CUSTOM ARTISTIC SVG FALLBACK PORTRAITS (Data URIs)
+        // Guarantees crisp, dignified poet portraits even offline
+        // ---------------------------------------------------------
+        const SVG_PORTRAITS = {
+            chandidas: `data:image/svg+xml;utf8,` + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+                    <defs>
+                        <linearGradient id="bgC" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#78350f"/>
+                            <stop offset="50%" stop-color="#b45309"/>
+                            <stop offset="100%" stop-color="#f59e0b"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="240" height="240" rx="28" fill="url(#bgC)"/>
+                    <circle cx="120" cy="108" r="78" fill="none" stroke="#fef3c7" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="4 4"/>
+                    <circle cx="120" cy="95" r="34" fill="#fde68a"/>
+                    <!-- Vaishnava Tilak -->
+                    <path d="M116 74 v16 a4 4 0 0 0 8 0 v-16" fill="none" stroke="#92400e" stroke-width="2.5" stroke-linecap="round"/>
+                    <!-- Hair/Topknot -->
+                    <path d="M86 92 c0-26 68-26 68 0 c0-10-12-28-34-28 s-34 18-34 28z" fill="#451a03"/>
+                    <circle cx="120" cy="56" r="12" fill="#451a03"/>
+                    <!-- Garland & Shawl -->
+                    <path d="M58 212 c8-48 36-68 62-68 s54 20 62 68 z" fill="#fef3c7"/>
+                    <path d="M92 146 q28 34 56 0" fill="none" stroke="#b45309" stroke-width="5" stroke-dasharray="6 4"/>
+                    <!-- Palm Leaf Manuscript Icon -->
+                    <rect x="78" y="182" width="84" height="18" rx="4" fill="#d97706" stroke="#fffbeb" stroke-width="1.5"/>
+                    <text x="120" y="230" text-anchor="middle" fill="#fffbeb" font-family="serif" font-size="13" font-weight="bold">কবি চণ্ডীদাস</text>
+                </svg>
+            `),
+            lalon: `data:image/svg+xml;utf8,` + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+                    <defs>
+                        <linearGradient id="bgL" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#134e4a"/>
+                            <stop offset="55%" stop-color="#0f766e"/>
+                            <stop offset="100%" stop-color="#d97706"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="240" height="240" rx="28" fill="url(#bgL)"/>
+                    <circle cx="120" cy="105" r="76" fill="none" stroke="#ccfbf1" stroke-opacity="0.22" stroke-width="2"/>
+                    <!-- Topknot & Flowing Hair/Beard of Fakir Lalon -->
+                    <circle cx="120" cy="54" r="14" fill="#e2e8f0"/>
+                    <circle cx="120" cy="94" r="32" fill="#f1f5f9"/>
+                    <path d="M92 104 q28 45 56 0 q-10 34 -28 38 q-18 -4 -28 -38z" fill="#cbd5e1"/>
+                    <!-- Baul Robe (Alkhalla) -->
+                    <path d="M56 212 c10-46 36-66 64-66 s54 20 64 66 z" fill="#f59e0b"/>
+                    <!-- Ektara (Single-stringed Baul instrument) -->
+                    <line x1="166" y1="62" x2="148" y2="188" stroke="#fef3c7" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="146" cy="190" r="15" fill="#b45309" stroke="#fef3c7" stroke-width="2.5"/>
+                    <text x="120" y="230" text-anchor="middle" fill="#f0fdfa" font-family="serif" font-size="13" font-weight="bold">ফকির লালন শাহ</text>
+                </svg>
+            `),
+            nazrul: `data:image/svg+xml;utf8,` + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+                    <defs>
+                        <linearGradient id="bgN" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#4c0519"/>
+                            <stop offset="55%" stop-color="#9f1239"/>
+                            <stop offset="100%" stop-color="#e11d48"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="240" height="240" rx="28" fill="url(#bgN)"/>
+                    <circle cx="120" cy="105" r="76" fill="none" stroke="#ffe4e6" stroke-opacity="0.22" stroke-width="2"/>
+                    <!-- Nazrul's Iconic Curly Flowing Hair & Gandhi/Swadeshi Cap -->
+                    <path d="M78 82 c-12 18-12 42-2 52 c8-8 10-20 10-34 z" fill="#1e293b"/>
+                    <path d="M162 82 c12 18 12 42 2 52 c-8-8-10-20-10-34 z" fill="#1e293b"/>
+                    <circle cx="120" cy="98" r="33" fill="#fde68a"/>
+                    <path d="M90 78 q30 -24 60 0 l-6 -18 q-24 -12 -48 0 z" fill="#f8fafc"/>
+                    <!-- Panjabi & Shawl -->
+                    <path d="M56 212 c10-46 36-66 64-66 s54 20 64 66 z" fill="#fff1f2"/>
+                    <path d="M84 152 l36 42 l36 -42" fill="none" stroke="#881337" stroke-width="4"/>
+                    <text x="120" y="230" text-anchor="middle" fill="#ffe4e6" font-family="serif" font-size="13" font-weight="bold">কাজী নজরুল ইসলাম</text>
+                </svg>
+            `)
+        };
+
+        // ---------------------------------------------------------
+        // 2. POETS METADATA (Bilingual)
+        // ---------------------------------------------------------
+        const POETS_DATA = {
+            chandidas: {
+                id: 'chandidas',
+                nameBn: 'কবি চণ্ডীদাস',
+                nameEn: 'Poet Chandidas',
+                eraBn: 'আনুমানিক চতুর্দশ–পঞ্চদশ শতাব্দী (মধ্যযুগ)',
+                eraEn: 'c. 14th–15th Century (Medieval Era)',
+                roleBn: 'বৈষ্ণব পদাবলীর আদি মানবতাবাদী কবি',
+                roleEn: 'Pioneer Humanist Poet of Vaishnava Padavali',
+                countBn: '১টি কালজয়ী পদ',
+                countEn: '1 Immortal Padavali Verse',
+                // Reliable Wikimedia Commons Medieval Vaishnava painting + instant SVG fallback
+                imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/jaidev_and_chandidas.jpg/400px-jaidev_and_chandidas.jpg',
+                fallbackSvg: SVG_PORTRAITS.chandidas,
+                accentClass: 'from-amber-600 to-yellow-700',
+                badgeClass: 'bg-amber-100 text-amber-900 dark:bg-amber-950/80 dark:text-amber-200 border-amber-300 dark:border-amber-800',
+                bioBn: 'মধ্যযুগের বাংলা সাহিত্যে বৈষ্ণব পদাবলীর অন্যতম শ্রেষ্ঠ কবি চণ্ডীদাস। বর্ণপ্রথা ও সাম্প্রদায়িক বিভাজনের যুগে তিনিই প্রথম উদাত্ত কণ্ঠে ঘোষণা করেছিলেন—“সবার উপরে মানুষ সত্য, তাহার উপরে নাই”। তাঁর এই মহাবাণীই পরবর্তীকালে বাউল দর্শন ও আধুনিক মানবতাবাদী সাহিত্যের ভিত্তি স্থাপন করে।',
+                bioEn: 'One of the greatest medieval lyricists of Bengali Vaishnava Padavali, Chandidas heralded the dawn of humanism in South Asian literature. Defying rigid caste hierarchies and ritualistic orthodoxy, he proclaimed: "Above all else, humanity is the highest truth; there is nothing above it."'
+            },
+            lalon: {
+                id: 'lalon',
+                nameBn: 'ফকির লালন শাহ',
+                nameEn: 'Fakir Lalon Shah',
+                eraBn: '১৭৭৪ – ১৭ অক্টোবর ১৮৯০',
+                eraEn: '1774 – 17 October 1890',
+                roleBn: 'বাউল সম্রাট, মরমী দার্শনিক ও মানবতাবাদী সাধক',
+                roleEn: 'Emperor of Baul Mystics & Humanist Philosopher',
+                countBn: '৮টি আধ্যাত্মিক ও মানবতাবাদী গান',
+                countEn: '8 Mystic & Humanist Songs',
+                // Jyotirindranath Tagore's authentic 1889 sketch of Lalon Shah on Wikimedia Commons
+                imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Lalon_Shah_by_Jyotirindranath_Tagore.jpg/440px-Lalon_Shah_by_Jyotirindranath_Tagore.jpg',
+                fallbackSvg: SVG_PORTRAITS.lalon,
+                accentClass: 'from-teal-700 to-emerald-800',
+                badgeClass: 'bg-teal-100 text-teal-900 dark:bg-teal-950/80 dark:text-teal-200 border-teal-300 dark:border-teal-800',
+                bioBn: 'বাউল সম্রাট ফকির লালন শাহ (লালন সাঁই) ছিলেন অসাম্প্রদায়িক মানবধর্ম, আত্মতত্ত্ব ও দেহতত্ত্বের মহান সাধক। প্রাতিষ্ঠানিক জাতপাত, মালা-তসবির বাহ্যিক আড়ম্বর ও ভেদাভেদকে প্রশ্নবিদ্ধ করে তিনি মানুষের অন্তরের মাঝেই পরম স্রষ্টার (‘মনের মানুষ’ বা ‘অচিন পাখি’) সন্ধান করেছেন।',
+                bioEn: 'Fakir Lalon Shah (Lalon Sai) is the most revered mystic philosopher and Baul saint of Bengal. Rejecting caste, sectarian dogma, and superficial ritualism, Lalon composed hundreds of philosophical songs exploring self-realization (Atma-tattva), somatic mysticism (Deha-tattva), and universal human dignity.'
+            },
+            nazrul: {
+                id: 'nazrul',
+                nameBn: 'কাজী নজরুল ইসলাম',
+                nameEn: 'Kazi Nazrul Islam',
+                eraBn: '২৪ মে ১৮৯৯ – ২৯ আগস্ট ১৯৭৬',
+                eraEn: '24 May 1899 – 29 August 1976',
+                roleBn: 'বাংলাদেশের জাতীয় কবি ও বিদ্রোহী কবি',
+                roleEn: 'National Poet of Bangladesh & The Rebel Poet',
+                countBn: '৬টি কালজয়ী কবিতা ও গান',
+                countEn: '6 Immortal Poems & Songs',
+                // Authentic Wikimedia Commons portrait of Kazi Nazrul Islam
+                imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Kazi_Nazrul_Islam.jpg/440px-Kazi_Nazrul_Islam.jpg',
+                fallbackSvg: SVG_PORTRAITS.nazrul,
+                accentClass: 'from-rose-700 to-red-900',
+                badgeClass: 'bg-rose-100 text-rose-900 dark:bg-rose-950/80 dark:text-rose-200 border-rose-300 dark:border-rose-800',
+                bioBn: 'বিদ্রোহী কবি ও বাংলাদেশের জাতীয় কবি কাজী নজরুল ইসলাম বাংলা কাব্যে সাম্যবাদ, অসাম্প্রদায়িকতা, নারীমুক্তি ও ধর্মব্যবসায়ীদের বিরুদ্ধে তীব্র বিদ্রোহের বাণী উচ্চারণ করেছেন। লালন ও চণ্ডীদাসের মানবতাবাদী দর্শন তাঁর ‘সাম্যবাদী’ ও ‘অগ্নিবীণা’ কাব্যগ্রন্থে আধুনিক ও বজ্রকণ্ঠ রূপ লাভ করেছে।',
+                bioEn: 'Kazi Nazrul Islam, the National Poet of Bangladesh known as the "Bidrohi Kobi" (Rebel Poet), championed egalitarianism, interfaith harmony, gender equality, and fierce resistance against religious hypocrisy. His poetry elevates the mystic humanism of Chandidas and Lalon into a thunderous modern manifesto.'
+            }
+        };
+
+        // ---------------------------------------------------------
+        // 3. ALL 15 POEMS & SONGS DATA (Complete Verses + Deep Analysis)
+        // ---------------------------------------------------------
+        const POEMS_DATA = [
+            {
+                id: 1,
+                poetId: 'chandidas',
+                theme: 'humanism',
+                titleBn: 'সবার উপরে মানুষ সত্য তাহার উপরে নাই',
+                titleEn: 'Sobar Upore Manush Sotto Tahar Upore Nai (Humanity is the Highest Truth)',
+                genreBn: 'মধ্যযুগীয় বৈষ্ণব পদাবলী (মানবতাবাদী পদ)',
+                genreEn: 'Medieval Vaishnava Padavali (Humanist Verse)',
+                timestamp: '00:28:32',
+                verses: `শুনহ মানুষ ভাই,
+সবার উপরে মানুষ সত্য
+তাহার উপরে নাই।
+মানুষের সনে যে জন ভ্রমে,
+সে জন ভ্রমে ঈশ্বরের সনে।
+মানুষেরে ঘৃণা করি’
+কেহ না হও রে পার,
+মানুষ ভজিলে হয়
+সকল কর্মের সার।
+চণ্ডীদাস কহে—ভাই,
+মানুষ-রতন বড়,
+মানুষের সেবা বিনে
+সকলই যে ছারখার।
+
+(প্রচলিত সংক্ষিপ্ত পাঠভেদ:
+শুনহ মানুষ ভাই—
+সবার উপরে মানুষ সত্য
+তাহার উপরে নাই।
+মানুষ বিনে আর কিছু নাই রে
+মানুষই পরম ঠাঁই॥)`,
+                analysisBn: `মধ্যযুগের বাঙালি কবি চণ্ডীদাসের এই কালজয়ী পদটি বাংলা সাহিত্যের মানবতাবাদের (Humanism) সর্বশ্রেষ্ঠ ও প্রাচীনতম ঘোষণা। তৎকালীন সমাজে যখন কঠোর বর্ণপ্রথা, অস্পৃশ্যতা এবং আচারসর্বস্ব ধর্মীয় গোঁড়ামি মানুষকে মানুষ থেকে বিচ্ছিন্ন করে রেখেছিল, তখন চণ্ডীদাস উদাত্ত কণ্ঠে ঘোষণা করেন যে রক্ত-মাংসের মানুষই এই বিশ্বসংসারে পরম সত্য—তার ওপরে আর কোনো লৌকিক বা অলৌকিক আড়ম্বর বড় হতে পারে না।
+
+পদের পরবর্তী চরণগুলোতে কবি স্পষ্ট করে বলেন, যে ব্যক্তি মানুষের সাথে ছলনা বা অন্যায় আচরণ করে, সে মূলত স্রষ্টার সাথেই প্রতারণা করে। মানুষকে ঘৃণা করে কোনোদিন ভবসিন্ধু পার হওয়া বা মুক্তি লাভ করা যায় না। মানুষ নামের এই অমূল্য রত্নের সেবা ও ভালোবাসাই সকল ধর্ম ও কর্মের মূল সারবস্তু। পরবর্তীতে ফকির লালন শাহের ‘মানবধর্ম’ এবং কাজী নজরুল ইসলামের ‘মানুষের চেয়ে বড় কিছু নাই, নহে কিছু মহীয়ান’—উভয় দর্শনেরই মূল বীজ নিহিত রয়েছে চণ্ডীদাসের এই অমর বাণীতে।`,
+                analysisEn: `This immortal lyric (Pad) by the medieval Bengali poet Chandidas stands as the supreme declaration of humanism in Bengali literature. Composed during an era dominated by rigid caste hierarchies, untouchability, and ritualistic orthodoxy, Chandidas boldly proclaimed that the living, breathing human being is the highest truth in the cosmos ("Sobar upore manush sotto, tahar upore nai").
+
+In the complete verse, Chandidas elaborates that whoever deceives or wrongs a fellow human being wrongs God Himself. Spiritual liberation is impossible if one harbors hatred toward humanity. Calling the human being a priceless gem ("Manush-ratan"), the poet concludes that without serving humanity, all religious rituals and worldly deeds are reduced to ashes. This foundational verse directly inspired Fakir Lalon Shah's mystic humanism and Kazi Nazrul Islam's egalitarian poetry centuries later.`
+            },
+            {
+                id: 2,
+                poetId: 'lalon',
+                theme: 'self',
+                titleBn: 'আমার আপন খবর আপনার হয় না (ও যার আপন খবর আপনার হয় না)',
+                titleEn: 'Amar Apon Khobor Apnar Hoy Na (One Who Knows Not Himself)',
+                genreBn: 'লালনগীতি • আত্মতত্ত্ব (Lalon-Geetika)',
+                genreEn: 'Lalon Geeti • Self-Realization (Atma-tattva)',
+                timestamp: '00:01:50 & 00:30:49',
+                verses: `আমার আপন খবর আপনার হয় না।
+একবার আপনারে চিনলে পরে যায় অচেনারে চেনা॥
+সাঁই নিকট থেকে দূরে দেখায়
+যেমন কেশের আড়ে পাহাড় লুকায় দেখ না।
+আমি ঢাকা দিল্লী হাতড়ে ফিরি
+আমার কোলের ঘোর তো যায় না॥`,
+                analysisBn: `এই গানে ফকির লালন শাহ বাউল ও সুফি দর্শনের মূল ভিত্তি ‘আত্মতত্ত্ব’ বা আত্মোপলব্ধির (Self-realization) কথা তুলে ধরেছেন। মানুষ স্রষ্টাকে খুঁজে বেড়ায় দূর-দূরান্তে—ঢাকা, দিল্লি কিংবা দেশ-দেশান্তরের বাহ্যিক তীর্থে; অথচ পরম স্রষ্টার নিদর্শন ও সত্য মানুষের নিজের অন্তরেই নিহিত।
+
+লালন এখানে একটি অসাধারণ উপমা ব্যবহার করেছেন: ‘যেমন কেশের আড়ে পাহাড় লুকায় দেখ না’। চোখের খুব কাছে থাকা একটি ক্ষুদ্র চুল বা চোখের পাপড়ি যেমন দিগন্তের বিশাল পাহাড়কে আড়াল করে দিতে পারে, ঠিক তেমনি আমাদের মনের ক্ষুদ্র অহংকার, লোভ ও অজ্ঞতার পর্দা আমাদের সবচেয়ে কাছে থাকা স্রষ্টাকে (‘সাঁই’) আড়াল করে রাখে। তাই লালনের বাণী—আগে নিজেকে চেনো; নিজের অন্তরকে চিনতে পারলেই সেই অচেনা পরম স্রষ্টাকে চেনা সম্ভব।`,
+                analysisEn: `In this foundational Baul song of self-knowledge (Atma-tattva), Fakir Lalon Shah articulates the timeless spiritual maxim: "Know Thyself, and you shall know the Divine." Humanity searches frantically for God in distant capitals and external shrines ("groping around Dhaka and Delhi"), remaining oblivious to the Divine truth residing right within their own bosom.
+
+Lalon employs a brilliant optical metaphor: just as a tiny strand of hair or an eyelash held right before the eye can block out a massive mountain on the horizon, our ego, spiritual blindness, and superficial illusions obscure the Lord (Sai) who is closer to us than our own breath. True spiritual awakening begins the moment one turns inward.`
+            },
+            {
+                id: 3,
+                poetId: 'lalon',
+                theme: 'antifanatic',
+                titleBn: 'সব লোকে কয় লালন কি জাত সংসারে',
+                titleEn: 'Sob Loke Koy Lalon Ki Jat Songsare (Everyone Asks What Caste Lalon Belongs To)',
+                genreBn: 'লালনগীতি • মানবধর্ম ও জাতপাত বিরোধী',
+                genreEn: 'Lalon Geeti • Anti-Caste & Universal Humanism',
+                timestamp: '00:05:01 & 00:10:00',
+                verses: `সব লোকে কয় লালন কি জাত সংসারে।
+লালন বলে জাতের কি রূপ দেখলাম না এই নজরে॥
+কেউ মালায় কেউ তসবি গলায়,
+তাইতে যে জাত ভিন্ন বলায়।
+যাওয়া কিম্বা আসার বেলায়,
+জাতের চিহ্ন রয় কার রে॥
+যদি ছুন্নত দিলে হয় মুসলমান,
+নারীর তবে কি হয় বিধান?
+বামন চিনি পৈতা প্রমাণ,
+বামনী চিনি কিসে রে॥
+জগৎ বেড়ে জেতের কথা,
+লোকে গৌরব করে যথা তথা।
+লালন সে জেতের ফাতা
+ঘুচিয়াছে সাধ বাজারে॥`,
+                analysisBn: `সাম্প্রদায়িক ভেদাভেদ, ধর্মীয় লেবাস ও জাতপাতের অসারতা প্রমাণে লালন শাহের এই গানটি বিশ্বসাহিত্যের অন্যতম শ্রেষ্ঠ যুক্তিবাদী সৃষ্টি। মানুষ সারাজীবন হিন্দু বা মুসলমান কিংবা উচ্চ-নীচ জাতের বড়াই করে, অথচ জন্মের সময় (‘আসার বেলায়’) কিংবা মৃত্যুর সময় (‘যাওয়ার বেলায়’) কোনো মানুষই গায়ে কোনো জাতের চিহ্ন নিয়ে আসে না বা যায় না। গলায় কাঠের মালা কিংবা তসবি পরা কেবলই মানুষের তৈরি বাহ্যিক আবরণ।
+
+এরপর লালন একটি অব্যর্থ যৌক্তিক প্রশ্ন ছুড়ে দেন: খৎনা বা সুন্নত দিলেই যদি একজন মানুষকে মুসলমান হিসেবে চিহ্নিত করা হয়, তবে নারীর ক্ষেত্রে কী বিধান হবে? আবার পৈতা দেখেই যদি ব্রাহ্মণ চেনা যায়, তবে ব্রাহ্মণ নারীকে চেনার উপায় কী? কারণ সুন্নত ও পৈতা—উভয় চিহ্নই কেবল পুরুষের শরীরে থাকে, নারীর থাকে না। এই অকাট্য যুক্তির মাধ্যমে লালন প্রমাণ করেছেন যে শারীরিক বা পোশাকি চিহ্ন দিয়ে মানুষের প্রকৃত পরিচয় নির্ধারণ করা যায় না; মনুষ্যত্বই মানুষের একমাত্র পরিচয়।`,
+                analysisEn: `One of Lalon Shah's most celebrated anti-sectarian songs, this composition dismantles artificial caste and communal divisions through razor-sharp logic. People boast endlessly about their caste and sectarian superiority, yet at the moment of birth ("coming") and death ("departing"), no human child bears any mark of religion or caste. Rosaries—whether a Hindu mala or a Muslim tasbih—are merely external markers adopted after birth.
+
+Lalon then poses an irrefutable logical and gender critique: if physical circumcision (sunnat) is what defines a Muslim, by what rule is a Muslim woman defined? And if the sacred thread (paita) proves a man is a Brahmin, how do we recognize a Brahmin woman? By exposing how external ritual markers are man-made and patriarchal, Lalon drowns the pride of caste in the market of spiritual devotion.`
+            },
+            {
+                id: 4,
+                poetId: 'lalon',
+                theme: 'humanism',
+                titleBn: 'কালী কৃষ্ণ গড খোদা, কোন নামে নাহি বাধা',
+                titleEn: 'Kali Krishna God Khoda, Kon Name Nahi Badha (No Barrier in Any Divine Name)',
+                genreBn: 'বাউল তত্ত্ব ও লালন দর্শন (ড. আহমদ শরীফের বাউলতত্ত্ব গ্রন্থে উদ্ধৃত)',
+                genreEn: 'Baul Philosophy & Mystic Pluralism',
+                timestamp: '00:12:18',
+                verses: `কালী কৃষ্ণ গড খোদা
+কোন নামে নাহি বাধা
+মন কালী কৃষ্ণ গড খোদা বলো রে।`,
+                analysisBn: `বাউল দর্শনের অসাম্প্রদায়িক ও সর্বজনীন চেতনার সারসংক্ষেপ এই চরণগুলো। স্রষ্টা এক ও অদ্বিতীয়, কিন্তু পৃথিবীর ভিন্ন ভিন্ন অঞ্চল, ভাষা ও সংস্কৃতির মানুষ নিজ নিজ ভাব ও ভাষা অনুযায়ী তাঁকে কেউ কালী, কেউ কৃষ্ণ, কেউ গড (God), আবার কেউ খোদা বা আল্লাহ নামে ডাকে।
+
+বাউল সাধকদের মতে, স্রষ্টার কোনো নামের সাথেই অন্য নামের বিরোধ নেই। নামের ভিন্নতা নিয়ে মানুষের মধ্যে যে সাম্প্রদায়িক হানাহানি ও ঘৃণা, তা মানুষের অজ্ঞতার ফল। অন্তরের বিশুদ্ধ প্রেম ও ভক্তি নিয়ে যে নামেই পরম স্রষ্টাকে ডাকা হোক না কেন, তাতে কোনো বাধা নেই।`,
+                analysisEn: `Cited in Dr. Ahmed Sharif's seminal treatise 'Baul Tattva', this verse encapsulates the radical spiritual pluralism of the Baul tradition. The Ultimate Creator is One, yet seekers across different cultures and languages invoke the Divine as Kali, Krishna, God, or Khoda.
+
+Rather than fighting over linguistic labels and theological terminology, Baul philosophy emphasizes that no sincere name of the Divine carries any barrier. Pure devotion and love for creation matter far more than the specific language in which one utters a prayer.`
+            },
+            {
+                id: 5,
+                poetId: 'lalon',
+                theme: 'body',
+                titleBn: 'আছে আদি মক্কা এই মানব দেহে',
+                titleEn: 'Ache Adi Mecca Ei Manob Dehe (The Primordial Sanctuary Resides in This Human Body)',
+                genreBn: 'লালনগীতি • দেহতত্ত্ব (Lalon-Geetika)',
+                genreEn: 'Lalon Geeti • Somatic Mysticism (Deha-tattva)',
+                timestamp: '00:23:29 & 00:27:12',
+                verses: `আছে আদি মক্কা এই মানবদেহে দেখ না রে মন ভেয়ে।
+দেশ-দেশান্তরে দৌড়ে এবার মরছো কেন হাঁফিয়ে॥
+করে অতি আজব হক্কা গঠেছে সেই মানুষ-মক্কা কুদরতি নূর দিয়ে।
+ও তার চার দ্বারে চার নূরের ইমাম মধ্যে সাঁই বসিয়ে॥
+...
+দশ-দুয়ারী মানুষ-মক্কা মুর্শিদ-পদে ডুবে দেখ গা ধাক্কা সামলিয়ে।
+ফকির লালন বলে, গুপ্ত মক্কা আদি ইমাম সেই মিঞে॥`,
+                analysisBn: `সুফি তাসাউফ ও বাউল দেহতত্ত্বের আলোকে রচিত এই গানে ফকির লালন শাহ মানবদেহ ও হৃদয়কে স্রষ্টার সর্বশ্রেষ্ঠ সৃষ্টি বা ‘মানুষ-মক্কা’ (আদি মক্কা) হিসেবে রূপকায়িত করেছেন। স্রষ্টা তাঁর অপূর্ব ‘কুদরতি নূর’ দিয়ে এই মানবদেহ গঠন করেছেন এবং মানুষের হৃদয়ের মাঝেই স্বয়ং সাঁইজি (স্রষ্টার জ্যোতি) বিরাজ করছেন।
+
+এখানে লালন মোটেও ভৌগোলিক মক্কা শরীফকে অস্বীকার বা অবমাননা করেননি; বরং সুফি সাধক জালালউদ্দিন রুমি ও বুল্লে শাহের মতোই তিনি ইঙ্গিত করেছেন যে, নিজের অন্তরের কলুষতা দূর না করে এবং হৃদয়ের কাবাকে শুদ্ধ না করে কেবল দেশ-দেশান্তরে বাহ্যিক তীর্থভ্রমণ করে হাঁপিয়ে মরলে প্রকৃত আত্মশুদ্ধি অর্জিত হয় না। কাজী নজরুল ইসলামও তাঁর ‘সাম্যবাদী’ কবিতায় ঠিক একই কথা বলেছেন—‘এই হৃদয়েই সে নীলাচল, কাশী, মথুরা, বৃন্দাবন / বুদ্ধ-গয়া এ, জেরুজালেম এ, মদিনা, কাবা-ভবন’।`,
+                analysisEn: `Rooted deeply in Sufi cosmology and Baul somatic mysticism (Deha-tattva), Lalon Shah uses the poetic metaphor of "Adi Mecca" (the primordial sanctuary) and "Manush-Mecca" (the Human Sanctuary) to describe the human body and heart fashioned by God's Divine Light (Qudrati Noor).
+
+Far from disrespecting sacred geography, Lalon—much like the Sufi masters Rumi and Bulleh Shah—reminds seekers that the human heart is the primary temple where the Divine presence resides. Running breathlessly across lands for outward show while keeping one's own heart corrupt achieves nothing. This exact metaphor is echoed word-for-word by Kazi Nazrul Islam in his poem 'Samyabadi', where he declares the human heart to be Medina and the Kaaba.`
+            },
+            {
+                id: 6,
+                poetId: 'lalon',
+                theme: 'body',
+                titleBn: 'গুরুর দয়া যারে হয় সেই জানে',
+                titleEn: 'Gurur Doya Jare Hoy Sei Jane (Only One Blessed with Spiritual Grace Knows)',
+                genreBn: 'লালনগীতি • গুরুতত্ত্ব ও দেহতত্ত্ব',
+                genreEn: 'Lalon Geeti • Spiritual Mentorship & Inner Awakening',
+                timestamp: '00:31:07',
+                verses: `গুরুর দয়া যারে হয় সেই জানে।
+যে রূপে সাঁই বিরাজ করে দেহ ভুবনে॥`,
+                analysisBn: `মানবদেহকে লালন এখানে ‘দেহভুবন’ (একটি ক্ষুদ্র বিশ্বজগৎ বা Microcosm) হিসেবে অভিহিত করেছেন। এই মানবদেহের ভেতরে কীভাবে স্রষ্টার প্রাণশক্তি ও জ্যোতি বিরাজ করছে, তা কেবল শুষ্ক পুঁথিগত বিদ্যা বা আক্ষরিক তর্ক দিয়ে অনুধাবন করা সম্ভব নয়।
+
+প্রকৃত প্রজ্ঞাবান গুরু বা মুর্শিদের দিকনির্দেশনা এবং বিনয় ও সাধনার মাধ্যমে যখন মানুষের অন্তর্চক্ষু খুলে যায়, কেবল তখনই সে নিজের দেহভুবনে স্রষ্টার অপূর্ব উপস্থিতি উপলব্ধি করতে পারে।`,
+                analysisEn: `In these profound lines, Lalon refers to the human body as 'Deha-Bhuban'—a microcosm of the entire universe. The subtle, mysterious way in which the Divine Lord (Sai) manifests life and consciousness within the human vessel cannot be grasped through dry scholasticism or literalist debate.
+
+Only one whose inner eye has been awakened through humility, spiritual discipline, and the grace of an enlightened mentor (Guru/Murshid) can perceive how the Divine illuminates the inner universe.`
+            },
+            {
+                id: 7,
+                poetId: 'lalon',
+                theme: 'body',
+                titleBn: 'ধন্য ধন্য বলি তারে (বেঁধেছে এমন ঘর শূন্যের উপর পোস্তা করে)',
+                titleEn: 'Dhonno Dhonno Boli Tare (Praise Be to the Architect Who Built This House on Air)',
+                genreBn: 'লালনগীতি • দেহতত্ত্বের রূপক গান',
+                genreEn: 'Lalon Geeti • Allegory of the Human Body',
+                timestamp: '00:31:07',
+                verses: `ধন্য ধন্য বলি তারে,
+বেঁধেছে এমন ঘর শূন্যের উপর পোস্তা করে॥
+সবে মাত্র একটি খুঁটি, খুঁটির গোড়ায় নাইকো মাটি,
+কিসে ঘর রবে খাঁটি, ঝড়ে তুফান এলে পরে॥
+মূলাধার কুঠুরি নয়টি, তার উপরে চিলেকোঠা,
+তাহে এক পাগলা বেটা বসে একা একেশ্বরে॥
+উপর নিচে সারি সারি, সাড়ে নয় দরজা তারি,
+লালন কয় যেতে পারি কোন দরজা খুলে ঘরে॥`,
+                analysisBn: `বাংলা লোকসঙ্গীতের ইতিহাসে সবচেয়ে জনপ্রিয় ও গভীর রূপক গানগুলোর একটি ‘ধন্য ধন্য বলি তারে’। এখানে ‘ঘর’ বলতে মানুষের দেহকে বোঝানো হয়েছে এবং যে মহান কারিগর নিঃশ্বাসেরূপ শূন্যের ওপর এই দেহ-ঘরটি নির্মাণ করেছেন, সেই স্রষ্টাকে ‘ধন্য ধন্য’ বলে প্রশংসা করা হয়েছে।
+
+গানটির প্রতিটি শব্দই দেহতত্ত্বের প্রতীক: ‘একটি খুঁটি’ হলো মানুষের মেরুদণ্ড বা দম; ‘নয়টি কুঠুরি’ ও ‘সাড়ে নয় দরজা’ হলো মানবদেহের ইন্দ্রিয় ও শারীরবৃত্তীয় দ্বারসমূহ (চোখ, কান, নাক, মুখ ইত্যাদি); আর সবার ওপরে ‘চিলেকোঠা’ হলো মানুষের মস্তিষ্ক বা সহস্রার পদ্ম, যেখানে আত্মা বা পরমাত্মা (‘পাগলা বেটা’—ভালোবাসার ডাকে স্রষ্টা বা আত্মা) একাকী বিরাজ করেন। ভিডিওতে যেমন উল্লেখ করা হয়েছে, এই কাব্যিক রূপককে কেউ যদি আক্ষরিক অর্থে ইট-কাঠের ঘর বা স্থূল শরীরে স্রষ্টার বসবাস মনে করে সমালোচনা করে, তবে তা সাহিত্য ও রূপকতত্ত্ব সম্পর্কে অজ্ঞতারই পরিচয় দেয়।`,
+                analysisEn: `One of the most iconic allegorical songs in Bengali folk music, "Dhonno Dhonno Boli Tare" praises the Supreme Creator as a master architect who built the miraculous "house" of the human body suspended upon the invisible foundation of breath ("built upon emptiness").
+
+Every image in the song is an anatomical and spiritual metaphor: the "single pillar without soil" represents the spinal column and life-breath; the "nine chambers" and "nine-and-a-half doors" represent the sensory openings of the human body; and the "attic" (chilekotha) at the top represents the crown of human consciousness where the Divine spark ("Pagla Beta"—an affectionate mystic term for the Beloved Soul/Lord) sits in solitary majesty. Interpreting such rich poetic allegory literally misses the entire celebration of God's creative wonder.`
+            },
+            {
+                id: 8,
+                poetId: 'lalon',
+                theme: 'antifanatic',
+                titleBn: 'কি কালাম পাঠালেন আমার সাঁই দয়াময়',
+                titleEn: 'Ki Kalam Pathalen Amar Sai Doyamoy (What Word Did My Merciful Lord Send)',
+                genreBn: 'লালনগীতি • তত্ত্বজিজ্ঞাসা ও যুক্তিবাদ',
+                genreEn: 'Lalon Geeti • Philosophical Inquiry & Rational Critique',
+                timestamp: '00:31:48 & 00:34:50',
+                verses: `কি কালাম পাঠালেন আমার সাঁই দয়াময়।
+এক এক দেশের এক এক ভাষা কয় খোদা পাঠায়॥
+এক যুগে পাঠায় কালাম অন্য যুগে হয় কেন হারাম,
+এমনি দেখি ভিন্ন তামাম ভিন্ন দেখা যায়॥
+যদি একই খোদার হয় রচনা তাতে তো ভিন্ন থাকে না,
+মানুষের সকল রচনা তাই তো ভিন্ন হয়॥
+এক এক দেশের এক এক বাণী পাঠান কি সাঁই গুণমণি,
+মানুষে রচিত জানি লালন ফকির কয়॥`,
+                analysisBn: `এই গানে ফকির লালন শাহ মানুষের চিন্তাশক্তি ও বিবেককে জাগ্রত করার জন্য একটি গভীর দার্শনিক প্রশ্ন উত্থাপন করেছেন। পরম দয়াময় স্রষ্টা (‘সাঁই দয়াময়’) তো একজনই এবং তিনি চিরন্তন ও অভ্রান্ত। কিন্তু দেখা যায়, একেক দেশে, একেক ভাষায় এবং একেক যুগে প্রচলিত ধর্মীয় বিধান পরস্পরকে বাতিল বা ‘হারাম’ বলে ঘোষণা করে এবং মানুষ সেই ভিন্নতা নিয়ে রক্তক্ষয়ী সংঘাতে লিপ্ত হয়।
+
+লালন প্রশ্ন তুলেছেন—একই স্রষ্টার বিধানে কেন এত বৈপরীত্য ও ভেদাভেদ থাকবে? এর মাধ্যমে তিনি ইঙ্গিত করেছেন যে, যুগে যুগে মানুষ নিজেদের গোষ্ঠীগত স্বার্থ, রাজনীতি ও সীমাবদ্ধ চিন্তা দিয়ে ধর্মীয় ব্যাখ্যা ও অনুশাসনে হস্তক্ষেপ করেছে, যার ফলে সর্বজনীন মানবিক সত্য খণ্ডিত হয়ে পড়েছে।`,
+                analysisEn: `In this daring philosophical song, Lalon Shah invites listeners to exercise critical reason regarding sectarian exclusivity. If the Merciful Creator (Sai Doyamoy) is One and Eternal, why do religious edicts across different countries, languages, and historical eras contradict each other—rendering forbidden in one age what was sacred in another?
+
+Lalon argues that true Divine law must be universal and harmonious, whereas contradiction and division are the hallmarks of human fabrication and self-serving clerical interpretation. This song closely parallels Kazi Nazrul Islam's critique of how self-interested gatekeepers manipulate scripture to divide humanity.`
+            },
+            {
+                id: 9,
+                poetId: 'lalon',
+                theme: 'self',
+                titleBn: 'আল্লাহ কে বোঝে তোমার অপার লীলে',
+                titleEn: 'Allah Ke Bojhe Tomar Opar Lile (O Allah, Who Can Fathom Your Infinite Mystery)',
+                genreBn: 'লালনগীতি • সৃষ্টিতত্ত্ব ও নূরতত্ত্ব',
+                genreEn: 'Lalon Geeti • Sufi Cosmology & Primordial Light',
+                timestamp: '00:35:09',
+                verses: `আল্লাহ কে বোঝে তোমার অপার লীলে।
+আপনি আল্লাহ ডাকো আল্লাহ বলে॥
+নিরাকারে তুমি নূরী ছিলে ডিম্ব অবতারী।
+সাকারে সৃজন করলে ত্রিভুবন আকারে চমৎকার ভাব দেখালে॥
+নিরাকার নিগম ধ্বনি সেও তো সত্য সবাই জানি।
+তুমি আগমের ফুল নিগমে রসুল আদমের ধড়ে জান হইলে॥
+আত্মতত্ত্ব জানে যারা সাঁইর নিগূঢ় লীলা দেখছে তারা।
+তুমি নীরে নিরঞ্জন অকৈতব ধন লালন খুঁজে বেড়ায় বনজঙ্গলে॥`,
+                analysisBn: `সুফি দর্শনের ‘নূর তত্ত্ব’ ও ‘সৃষ্টিতত্ত্ব’ (Cosmology)-এর ভাবধারায় রচিত এই গানটিতে লালন শাহ মহান আল্লাহর অসীম ও অপার লীলার বন্দনা করেছেন। সুফি দর্শনে প্রচলিত আছে যে, সৃষ্টির আদিতে স্রষ্টা যখন নিরাকার ও গুপ্ত ধন ছিলেন, তখন তিনি নিজের নূর থেকে ত্রিভুবন ও প্রাণিকুল সৃজন করলেন এবং আদমের দেহে (‘ধড়ে’) রুহ বা প্রাণ সঞ্চার করলেন।
+
+গানটির শেষ দুই চরণে লালন অত্যন্ত বিনয়ের সাথে বলেছেন—যাঁরা আত্মতত্ত্ব জানেন, তাঁরাই কেবল স্রষ্টার এই নিগূঢ় প্রেমময় লীলা বুঝতে পারেন; আর যাঁরা তা জানেন না, তাঁরা নিজের ভেতরের সেই অকৃত্রিম ধনকে (‘অকৈতব ধন’) না চিনে বনে-জঙ্গলে খুঁজে বেড়ান। এটি স্রষ্টার প্রতি লালনের গভীর আত্মসমর্পণ ও আধ্যাত্মিক প্রজ্ঞার নিদর্শন।`,
+                analysisEn: `Composed in the tradition of Sufi cosmology (Wahdat al-Wujud and Nur-e-Muhammadi), this devotional song marvels at the unfathomable mystery (Opar Lila) of Allah's creation. Lalon describes how the Formless Divine manifested the visible universe out of primordial Light (Noor) and breathed the living spirit (Jaan/Ruh) into the vessel of Adam.
+
+In the closing couplet, Lalon humbles himself: those who have mastered self-knowledge (Atma-tattva) perceive the Lord's profound mystery within their own being, while Lalon laments wandering the forests searching externally for the spotless treasure (Akaitab Dhan) that already resides within.`
+            },
+            {
+                id: 10,
+                poetId: 'nazrul',
+                theme: 'humanism',
+                titleBn: 'সাম্যবাদী',
+                titleEn: 'Samyabadi (The Egalitarian Manifesto)',
+                genreBn: 'কবিতা • সাম্যবাদী কাব্যগ্রন্থ (১৯২৫)',
+                genreEn: 'Poem • From Samyabadi Collection (1925)',
+                timestamp: '00:02:40, 00:03:20 & 00:36:24',
+                verses: `গাহি সাম্যের গান—
+যেখানে আসিয়া এক হয়ে গেছে সব বাধা-ব্যবধান
+যেখানে মিশেছে হিন্দু-বৌদ্ধ-মুসলিম-ক্রীশ্চান
+গাহি সাম্যের গান!
+...
+পেটে পিঠে কাঁধে মগজে যা-খুশি পুঁথি ও কেতাব বও,
+কোরান-পুরাণ-বেদ-বেদান্ত-বাইবেল-ত্রিপিটক-
+জেন্দাবেস্তা-গ্রন্থসাহেব পড়ে যাও, যত শখ,—
+কিন্তু কেন এ পণ্ডশ্রম, মগজে হানিছ শূল?
+দোকানে কেন এ দর-কষাকষি? —পথে ফোটে তাজা ফুল!
+তোমাতে রয়েছে সকল কেতাব সকল কালের জ্ঞান,
+সকল শাস্ত্র খুঁজে পাবে সখা, খুলে দেখ নিজ প্রাণ!
+তোমাতে রয়েছে সকল ধর্ম, সকল যুগাবতার,
+তোমার হৃদয় বিশ্ব-দেউল সকল দেবতার।
+কেন খুঁজে ফের দেবতা ঠাকুর মৃত পুঁথি-কঙ্কালে?
+হাসিছেন তিনি অমৃত-হিয়ার নিভৃত অন্তরালে!
+বন্ধু, বলিনি ঝুট,
+এইখানে এসে লুটাইয়া পড়ে সকল রাজার মুকুট।
+এই হৃদয়েই সে নীলাচল, কাশী, মথুরা, বৃন্দাবন,
+বুদ্ধ-গয়া এ, জেরুজালেম এ, মদিনা, কাবা-ভবন,
+মসজিদ এই, মন্দির এই, গির্জা এই হৃদয়,
+এইখানে বসে ঈসা মুসা পেল সত্যের পরিচয়।`,
+                analysisBn: `জাতীয় কবি কাজী নজরুল ইসলামের ‘সাম্যবাদী’ কবিতাটি বাংলা সাহিত্যে অসাম্প্রদায়িকতা, মানবিক সাম্য ও আত্মোপলব্ধির এক অবিস্মরণীয় ঘোষণাপত্র। ভিডিওতে অত্যন্ত চমৎকারভাবে দেখানো হয়েছে যে, ফকির লালন শাহ তাঁর গানে যে কথা গ্রামীণ বাউল ভাষায় বলেছেন (‘একবার আপনারে চিনলে পরে যায় অচেনারে চেনা’ এবং ‘আছে আদি মক্কা এই মানব দেহে’), কাজী নজরুল ইসলাম ঠিক একই দর্শন আধুনিক কাব্যভাষায় ব্যক্ত করেছেন।
+
+নজরুল বলছেন, মনের ভেতর মানবিকতা ও প্রেমের ফুল না ফুটিয়ে কেবল পেটে-পিঠে-মগজে ধর্মগ্রন্থ বয়ে বেড়ানো এবং তা নিয়ে দোকানে দর-কষাকষির মতো তর্ক করা পণ্ডশ্রম মাত্র। মানুষের নিজের প্রাণের ভেতরেই রয়েছে সকল কালের জ্ঞান এবং মানুষের অমৃত-হৃদয়ের নিভৃত অন্তরালেই স্রষ্টা হাসছেন। তাই নজরুল মানুষের হৃদয়কেই কাশী, মথুরা, বৃন্দাবন, বুদ্ধগয়া, জেরুজালেম, মদিনা ও কাবা-ভবন বলে ঘোষণা করেছেন।`,
+                analysisEn: `Kazi Nazrul Islam's "Samyabadi" (Egalitarian) is a monumental manifesto of interfaith harmony and inward spirituality. As highlighted in the video analysis, every core philosophical pillar for which literalists criticize Lalon Shah is expressed with even greater intensity by Bangladesh's National Poet in this poem.
+
+Echoing Lalon's "Know Thyself" and "Adi Mecca in the human body," Nazrul questions the futility of carrying scriptures in one's belly, back, and brain without awakening the living heart ("Why search for God in the dead skeletons of books? He smiles in the secret chamber of your immortal heart!"). Nazrul declares that the human heart itself is Kashi, Mathura, Bodh Gaya, Jerusalem, Medina, and the Kaaba—the very sanctuary where Moses and Jesus discovered the Ultimate Truth.`
+            },
+            {
+                id: 11,
+                poetId: 'nazrul',
+                theme: 'antifanatic',
+                titleBn: 'জাতের নামে বজ্জাতি সব জাত-জালিয়াতি খেলছ জুয়া',
+                titleEn: 'Jater Name Bajjati (Hypocrisy and Fraud in the Name of Caste)',
+                genreBn: 'নজরুলগীতি ও কবিতা • জাতপাত বিরোধী',
+                genreEn: 'Nazrul Geeti & Poem • Anti-Caste Satire',
+                timestamp: '00:05:26 & 00:10:49',
+                verses: `জাতের নামে বজ্জাতি সব জাত-জালিয়াতি খেলছ জুয়া!
+ছুঁলেই তোর জাত যাবে? জাত ছেলের হাতের নয় তো মোয়া॥
+হুঁকোর জল আর ভাতের হাঁড়ি ভাবলি এতেই জাতির জান,
+তাই তো বেকুব, করলি তোরা এক জাতিকে একশো-খান!
+এখন দেখিস ভারত জোড়া
+পচে আছিস বাসি মড়া,
+মানুষ নাই আজ, আছে শুধু জাত-শেয়ালের হুক্কাহুয়া॥`,
+                analysisBn: `ফকির লালন শাহ যেমন ‘সব লোকে কয় লালন কি জাত সংসারে’ গানে জাতপাতের বিরুদ্ধে প্রশ্ন তুলেছিলেন, কাজী নজরুল ইসলাম এই গানে আরও প্রত্যক্ষ ও বজ্রকণ্ঠে জাতপাত ও ছোঁয়াছুঁয়ির ভণ্ডামিকে আঘাত করেছেন।
+
+নজরুল বিদ্রূপ করে বলেন, জাত বা ধর্ম কি ছোট ছেলের হাতের মুড়ির মোয়া যে অন্য ধর্মের বা অন্য জাতের মানুষ ছুঁলেই তা নষ্ট হয়ে যাবে? হুঁকোর জল আর ভাতের হাঁড়ির ছোঁয়াছুঁয়ির মধ্যে যারা ধর্ম ও জাতির প্রাণ খুঁজে বেড়ায়, সেই মূর্খরাই অখণ্ড মানবজাতিকে শত টুকরোয় বিভক্ত করেছে। যেখানে মানুষ পরিচয় মুছে গিয়ে কেবল সাম্প্রদায়িক ও জাতিগত অহংকার থাকে, কবি তাকে ‘জাত-শেয়ালের হুক্কাহুয়া’ বলে ধিক্কার জানিয়েছেন।`,
+                analysisEn: `Directly paralleling Lalon Shah's anti-caste song "Sob Loke Koy Lalon Ki Jat Songsare," Kazi Nazrul Islam delivers a blistering satire against social untouchability and sectarian division.
+
+Nazrul mocks the fragility of orthodox caste pride: "Will your caste vanish merely by a human touch? Caste is not a sweetmeat ball (moya) in a child's hand!" By reducing religion and community honor to shared hookah water and cooking pots, bigots fractured one human family into a hundred pieces, replacing living human beings with the howling of "caste-jackals."`
+            },
+            {
+                id: 12,
+                poetId: 'nazrul',
+                theme: 'antifanatic',
+                titleBn: 'গোঁড়ামি ধর্ম নয়',
+                titleEn: 'Gorami Dhormo Noy (Fanaticism is Not Religion)',
+                genreBn: 'কবিতা • নজরুল রচনাবলী (সম্পূর্ণ কবিতা)',
+                genreEn: 'Poem • Complete Text from Nazrul Rachanabali',
+                timestamp: '00:05:43, 00:13:21 & 00:40:36–00:53:06',
+                verses: `শুধু গুণ্ডামি ভণ্ডামি আর গোঁড়ামি ধর্ম নয়,
+এই গোঁড়াদের সর্বশাস্ত্রে শয়তানী চেলা কয়!
+এক সে স্রষ্টা সব সৃষ্টির, এক সে পরম প্রভু,
+একের অধিক স্রষ্টা কোন সে ধর্ম কহে না কভু।
+তবু অজ্ঞানে যদি শয়তানে শরিকী সত্য আনে,
+তার বিচারক এক সে আল্লাহ্—লিখিত আল্-কোরানে।
+মানুষ তাহার বিচার করিতে পারে না। নরকে তারে
+অথবা স্বর্গে কোন মানুষের শক্তি পাঠাতে পারে?
+উপদেশ শুধু দিবে অজ্ঞানে, আল্লাহর সে হুকুম,
+নিষেধ কোরানে বিধর্মী পরে করিতে কোন জুলুম।
+কেন পাপ করে ভুল পথে যায় মানব জন্ম লয়ে,
+কেন আসে এই ধরাতে জন্ম অন্ধ পঙ্গু হয়ে,
+কেন কেহ হয় চির-দরিদ্র, কেহ চির-ধনী হয়,
+কেন কেহ অভিশপ্ত, কাহারো জীবন শান্তিময়,
+কোন শাস্ত্রী বা মাওলানা বল জেনেছে তাহার ভেদ?
+গাধার মতন বয়েছে ইহারা শাস্ত্র কোরান বেদ!
+জীবনে যে তারে ডাকেনিক, প্রভু ক্ষুধার অন্ন তার
+কখনো বন্ধ করেনি কেন?—কে করে তার বিচার?
+তাঁর সৃষ্টির উদার আকাশ সকলেরে থাকে ঘিরে,
+তাঁর বায়ু মসজিদে মন্দিরে সকলের ঘরে ফিরে।
+তাঁহার চন্দ্র সূর্যের আলো করে না ধর্ম-ভেদ,
+সর্বজাতির ঘরে আসে, কই আনে না ত বিচ্ছেদ!
+তাঁরই মেঘ-বারি সব ধর্মীর মাঠে ঘাটে ঘরে ঝরে,
+তাঁহার অগ্নি জলে বায়ু বহে সকলের সেবা করে।
+তাঁর মৃত্তিকা ফল ফুল দেয় সর্বজাতির মাঠে,
+কে করে প্রচার বিদ্বেষ তবু তাঁর এই প্রেমের হাটে?
+কোন অলী কোন দরবেশ যোগী কোন পয়গম্বর
+অন্য ধর্মে দেয়নিক গালি—কে রাখে তাহার খবর?
+যাহারা গুণ্ডা ভণ্ড, তারাই ধর্মের আবরণে
+স্বার্থের লোভে ক্ষ্যাপাইয়া তোলে অজ্ঞান জনগণে।
+জাতিতে জাতিতে ধর্মে ধর্মে বিদ্বেষ এরা আনি'
+আপনার পেট ভরায়, তখ্ত চায় এরা শয়তানী!
+ধর্ম-আন্দোলনের ছদ্মবেশে এরা কুৎসিত,
+বলে—এরা হয়ে মন্ত্রী করিবে স্বধর্মীদের হিত!
+এরা জমিদার মহাজন ধনী নওয়াবী খেতাব পায়,
+কারো কল্যাণ চাহে না ইহারা, নিজ কল্যাণ চায়।
+ধন-সম্পদ এত ইহাদের, করেছে কি কভু দান?
+আশ্রয় দেয় গরীবেরে কভু এদের ঘর-দালান?
+ধর্ম জাতির নাম লয়ে এরা বিষাক্ত করে দেশ,
+এরা বিষাক্ত সাপ, ইহাদের মেরে কর সব শেষ!
+নাই পরমত-সহিষ্ণুতা সে কভু নহে ধার্মিক,
+এরা রাক্ষস-গোষ্ঠী ভীষণ অসুর দৈত্যাধিক!
+উৎপীড়ন যে করে, নাই তার কোন ধর্ম ও জাতি,
+জ্যোতির্ময়েরে আড়াল করেছে এরা আঁধারের সাথী।
+মানবে মানবে আনে বিদ্বেষ কলহ ও হানাহানি,
+ইহারা দানব, কেড়ে খায় সব মানবের দানা-পানি।
+এই আক্ষেপ জেনো তাহাদের মৃত্যুর যন্ত্রণা,
+মরণের আগে হতেছে তাদের দুর্গতি লাঞ্ছনা।
+এক সে পরম বিচারক, তাঁর শরিক কেহই নাই,
+কাহারে শাস্তি দেন তিনি, দেখ দু'দিন পরে ত ভাই!
+মোরা দরিদ্র কাঙাল নির্যাতিত ও সর্বহারা,
+মোদের ভ্রান্ত দ্বন্দ্বের পথে নিতে চায় আজ যারা,
+আনে অশান্তি উৎপাত আর খোঁজে স্বার্থের দাও,
+কোরানে আল্লাহ্ এদেরই কন, "শাখামৃগ হয়ে যাও!"`,
+                analysisBn: `কাজী নজরুল ইসলামের ‘গোঁড়ামি ধর্ম নয়’ কবিতাটি ধর্মব্যবসায়ী, উগ্রবাদী ও সাম্প্রদায়িক উস্কানিদাতাদের স্বরূপ উন্মোচনে বাংলা সাহিত্যের সবচেয়ে শক্তিশালী কবিতাগুলোর একটি। ভিডিওর শেষভাগে পুরো কবিতাটি পাঠ করে দেখানো হয়েছে কীভাবে নজরুল ইসলাম ধর্মের প্রকৃত উদারতা এবং ভণ্ডদের রাজনৈতিক লোভের পার্থক্য তুলে ধরেছেন।
+
+কবিতাটির মূল দার্শনিক দিকগুলো হলো:
+১. **বিচারের মালিক একমাত্র স্রষ্টা:** কোনো মানুষ অন্য কোনো মানুষকে স্বর্গে বা নরকে পাঠানোর ক্ষমতা রাখে না। কোরআনে বিধর্মীর ওপর জুলুম করতে স্পষ্ট নিষেধ করা হয়েছে।
+২. **প্রকৃতির উদারতা ও অসাম্প্রদায়িকতা:** স্রষ্টার আকাশ, বাতাস, চন্দ্র-সূর্যের আলো, মেঘের বৃষ্টি এবং মাটির ফল-ফুল মন্দির-মসজিদ কিংবা হিন্দু-মুসলিম নির্বিশেষে সকল মানুষের ঘরে সমানভাবে সেবা দেয়। যে ব্যক্তি আজীবন স্রষ্টাকে ডাকেনি, স্রষ্টা তারও ক্ষুধার অন্ন বন্ধ করেন না।
+৩. **ধর্মের নামে রাজনীতি ও স্বার্থসিদ্ধি:** কোনো সত্যিকারের অলী, দরবেশ, যোগী বা পয়গম্বর কখনো অন্য ধর্মকে গালি দেননি। কেবল গুণ্ডা ও ভণ্ডরাই ধর্মের আবরণে সাধারণ মানুষকে ক্ষেপিয়ে তোলে, জাতিতে-জাতিতে বিদ্বেষ ছড়ায় এবং নিজেদের পেট ভরানো ও ক্ষমতার মসনদ (‘তখ্ত’ ও মন্ত্রিত্ব) দখলের জন্য ধর্মকে ব্যবহার করে।
+৪. **পরমতসহিষ্ণুতা:** নজরুল দ্ব্যর্থহীন ভাষায় ঘোষণা করেছেন—“নাই পরমত-সহিষ্ণুতা সে কভু নহে ধার্মিক”। অর্থাৎ অন্যের মত ও পথের প্রতি সহনশীলতা ছাড়া কেউ ধার্মিক হতে পারে না।`,
+                analysisEn: `Kazi Nazrul Islam's "Gorami Dhormo Noy" (Fanaticism is Not Religion) is one of the most fearless indictments of religious hypocrisy and sectarian politics ever written in Bengali. Recited in full during the video's conclusion, the poem dismantles clerical arrogance through four profound arguments:
+
+1. **Judgment Belongs Solely to God:** No mortal has the power or authority to send another human being to Heaven or Hell. The Quran explicitly forbids oppression (zulum) against people of other faiths.
+2. **The Universal Grace of Nature:** Those who carry scriptures "like donkeys" without understanding their essence fail to see that God's sky, air, sunlight, rain, and fertile earth nourish mosques, temples, and homes of all faiths alike—even feeding those who never called upon Him.
+3. **Political Exploitation of Faith:** True prophets, Sufi saints (Awliya, Darvesh), and yogis never insulted other religions. Only hypocrites and thugs weaponize religion to incite ignorant masses, sow communal hatred, fill their own bellies, and capture political thrones (takht) and ministerial posts.
+4. **Tolerance as the Measure of Faith:** Nazrul lays down an immortal ethical criterion: "He who lacks tolerance for others' beliefs (paramat-sahishnuta) is never truly religious."`
+            },
+            {
+                id: 13,
+                poetId: 'nazrul',
+                theme: 'humanism',
+                titleBn: 'নারী',
+                titleEn: 'Nari (Woman — Song of Gender Equality)',
+                genreBn: 'কবিতা • সাম্যবাদী কাব্যগ্রন্থ (১৯২৫)',
+                genreEn: 'Poem • From Samyabadi Collection (1925)',
+                timestamp: '00:12:52, 00:15:40 & 00:38:38',
+                verses: `সাম্যের গান গাই—
+আমার চক্ষে পুরুষ-রমণী কোনো ভেদাভেদ নাই!
+বিশ্বের যা-কিছু মহান সৃষ্টি চির-কল্যাণকর,
+অর্ধেক তার করিয়াছে নারী, অর্ধেক তার নর।
+বিশ্বে যা-কিছু এল পাপ-তাপ বেদনা অশ্রুবারি,
+অর্ধেক তার আনিয়াছে নর, অর্ধেক তার নারী।
+নরককুণ্ড বলিয়া কে তোমা করে নারী হেয়-জ্ঞান?
+তারে বল, আদি পাপ নারী নহে, সে যে নর-শয়তান।
+অথবা পাপ যে—শয়তান যে—নর নহে নারী নহে,
+ক্লীব সে, তাই সে নর ও নারীতে সমান মিশিয়া রহে।
+এ বিশ্বে যত ফুটিয়াছে ফুল, ফলিয়াছে যত ফল,
+নারী দিল তাহে রূপ-রস-মধু-গন্ধ সুনির্মল।
+...
+চোখে চোখে আজ চাহিতে পার না; হাতে রুলি, পায়ে মল,
+মাথার ঘোমটা ছিঁড়ে ফেল নারী, ভেঙে ফেল ও শিকল!
+যে ঘোমটা তোমা করিয়াছে ভীরু, ওড়াও সে আবরণ!
+দূর করে দাও দাসীর চিহ্ন আছে যত আভরণ!
+...
+সেদিন সুদূর নয়—
+যেদিন ধরণী পুরুষের সাথে গাহিবে নারীরও জয়!`,
+                analysisBn: `‘নারী’ কবিতায় কাজী নজরুল ইসলাম মানবসভ্যতার ইতিহাসে নারী ও পুরুষের সম্পূর্ণ সমান অধিকার ও অবদানের কথা ঘোষণা করেছেন। পৃথিবীতে যা কিছু মহান ও কল্যাণকর সৃষ্টি হয়েছে, তার অর্ধেক করেছে নারী এবং অর্ধেক করেছে নর।
+
+রক্ষণশীল ও পুরুষতান্ত্রিক সমাজে যারা নারীকে ‘নরককুণ্ড’ বা ‘আদি পাপের মূল’ বলে তুচ্ছতাচ্ছিল্য করে, কবি তাদের মুখোশ উন্মোচন করে বলেছেন—পাপ বা শয়তানি কোনো নির্দিষ্ট লিঙ্গের নয়, তা নর ও নারীর ভেতর সমানভাবে থাকতে পারে। একইসাথে নারীকে ভীরু, অবরুদ্ধ ও দাসী বানিয়ে রাখার সামাজিক শিকল ভেঙে আত্মমর্যাদায় মাথা তুলে দাঁড়ানোর ঐতিহাসিক আহ্বান জানিয়েছেন বিদ্রোহী কবি।`,
+                analysisEn: `In "Nari" (Woman), Kazi Nazrul Islam proclaims absolute gender equality, declaring that half of all noble and benevolent creations in world history were achieved by women, and half by men.
+
+Nazrul directly confronts misogynistic dogmas that demean women as the "pit of hell" (Narak-kunda) or blame women alone for "original sin." He argues that sin and virtue have no gender—they exist equally in men and women. Calling upon women to cast off the shackles of fear and servitude that reduced them to domestic slaves, Nazrul envisions a dawn where the world celebrates women's triumphs side by side with men's.`
+            },
+            {
+                id: 14,
+                poetId: 'nazrul',
+                theme: 'self',
+                titleBn: 'বিদ্রোহী',
+                titleEn: 'Bidrohi (The Rebel)',
+                genreBn: 'কবিতা • অগ্নিবীণা কাব্যগ্রন্থ (১৯২২)',
+                genreEn: 'Poem • From Agnibeena Collection (1922)',
+                timestamp: '00:16:51, 00:17:44, 00:18:31 & 00:19:04',
+                verses: `বল বীর—
+বল উন্নত মম শির!
+শির নেহারি' আমারি নতশির ওই শিখর হিমাদ্রির!
+বল বীর—
+বল মহাবিশ্বের মহাকাশ ফাড়ি'
+চন্দ্র সূর্য গ্রহ তারা ছাড়ি'
+ভূলোক দ্যুলোক গোলক ভেদিয়া
+খোদার আসন 'আরশ' ছেদিয়া,
+উঠিয়াছি চির-বিস্ময় আমি বিশ্ববিধাতৃর!
+...
+আমি রুষে উঠি যবে ছুটি মহাকাশ ছাপিয়া,
+ভয়ে সপ্ত নরক হাবিয়া দোজখ নিভে নিভে যায় কাঁপিয়া!
+আমি বিদ্রোহ-বাহী নিখিল অখিল ব্যাপিয়া!
+...
+আমি উন্মাদ, আমি উন্মাদ!!
+আমি চিনেছি আমারে, আজিকে আমার খুলিয়া গিয়াছে সব বাঁধ!!
+...
+আমি বিদ্রোহী ভৃগু, ভগবান বুকে এঁকে দিই পদ-চিহ্ন!
+আমি স্রষ্টা-সূদন, শোক-তাপ-হানা খেয়ালী বিধির বক্ষ করিব ভিন্ন!
+...
+আমি চির-বিদ্রোহী বীর—
+বিশ্ব ছাড়ায়ে উঠিয়াছি একা চির-উন্নত শির!`,
+                analysisBn: `বাংলা সাহিত্যের সর্বকালের অন্যতম শ্রেষ্ঠ কবিতা ‘বিদ্রোহী’। ভিডিওতে এই কবিতার উদ্ধৃতি দিয়ে দেখানো হয়েছে যে, কাব্যিক অলংকার, উপমা ও রূপককে (Poetic Metaphor) যদি আক্ষরিক অর্থে বিচার করা হয়, তবে কেবল লালন শাহ নন, কাজী নজরুল ইসলামের ‘বিদ্রোহী’ কবিতাকেও গোঁড়ারা ভুল বুঝবে।
+
+লালন যেমন বলেছেন—‘একবার আপনারে চিনলে পরে যায় অচেনারে চেনা’, নজরুলও ‘বিদ্রোহী’ কবিতায় আত্মোপলব্ধির চরম শিখরে পৌঁছে ঘোষণা করেছেন—‘আমি চিনেছি আমারে, আজিকে আমার খুলিয়া গিয়াছে সব বাঁধ!!’। মানুষ যখন নিজের ভেতরের অসীম আত্মশক্তি ও স্রষ্টা-প্রদত্ত মর্যাদাকে চিনতে পারে, তখন সে অন্যায়, পরাধীনতা ও অবিচারের বিরুদ্ধে মাথা তুলে দাঁড়ায়। ‘খোদার আসন আরশ ছেদিয়া’, ‘সপ্ত নরক হাবিয়া দোজখ নিভে যাওয়া’ কিংবা পৌরাণিক ঋষি ভৃগুর উপমায় ‘ভগবান বুকে এঁকে দিই পদ-চিহ্ন’—এসবই মানবাত্মার অদম্য সাহস ও অত্যাচারীর বিরুদ্ধে বিদ্রোহের মহাকাব্যিক রূপক।`,
+                analysisEn: `One of the greatest poems in modern world literature, "Bidrohi" (The Rebel) celebrates the indomitable majesty of the awakened human spirit. In the video analysis, these stanzas are recited to illustrate why poetic hyperbole and spiritual metaphor cannot be judged through narrow literalism.
+
+Directly echoing Lalon's philosophy of self-realization, Nazrul thunders: "Ami chinechhi amare, ajike amar khuliya giyachhe sob bandh!!" ("I have known myself, today all my fetters are broken!!"). Powerful metaphors such as "piercing God's throne (Arsh)," causing the seven hells (Hawiya Dozakh) to tremble and extinguish in fear, or the mythological sage Bhrigu leaving his footprint on Bhagavan's chest symbolize humanity's fearless rebellion against tyranny, colonialism, and injustice.`
+            },
+            {
+                id: 15,
+                poetId: 'nazrul',
+                theme: 'humanism',
+                titleBn: 'মানুষ',
+                titleEn: 'Manush (The Human Being)',
+                genreBn: 'কবিতা • সাম্যবাদী কাব্যগ্রন্থ (১৯২৫)',
+                genreEn: 'Poem • From Samyabadi Collection (1925)',
+                timestamp: '00:19:43, 00:20:01 & 00:22:41',
+                verses: `গাহি সাম্যের গান—
+মানুষের চেয়ে বড় কিছু নাই, নহে কিছু মহীয়ান!
+নাই দেশ-কাল-পাত্রের ভেদ, অভেদ ধর্মজাতি,
+সব দেশে সব কালে ঘরে-ঘরে তিনি মানুষের জ্ঞাতি।
+...
+ওই মন্দির পূজারীর, হায় দেবতা, তোমার নয়!
+মসজিদে কাল শিরনি আছিল,—অঢেল গোশ্ত রুটি
+বাঁচিয়া গিয়াছে, মোল্লা সাহেব হেসে তাই কুটি কুটি!
+এমন সময় এল মুসাফির গায়ে আজারির চিন্,
+বলে, "বাবা, আমি ভুখা ফাঁকা আছি আজ নিয়ে সাত দিন!"
+তেরিয়া হইয়া হাঁকিল মোল্লা—"ভ্যালা হলো দেখি লেঠা,
+ভুখা আছ মর গো-ভাগাড়ে গিয়ে! নামাজ পড়িস বেটা?"
+ভুখারী কহিল, "না বাবা!" মোল্লা হাঁকিল—"তাহলে শালা
+সোজা পথ দেখ!" গোশ্ত-রুটি নিয়া মসজিদে দিল তালা!
+ভুখারী ফিরিয়া চলে,
+চলিতে চলিতে বলে—
+"আশিটা বছর কেটে গেল, আমি ডাকিনি তোমায় কভু,
+আমার ক্ষুধার অন্ন তা' বলে বন্ধ করনি প্রভু।
+তব মসজিদ মন্দিরে প্রভু নাই মানুষের দাবি,
+মোল্লা-পুরুত লাগায়েছে তার সকল দুয়ারে চাবি!"
+...
+তোমার মিনারে চড়িয়া ভণ্ড গাহে স্বার্থের জয়!
+মানুষেরে ঘৃণা করি'
+ও কারা কোরান, বেদ, বাইবেল চুম্বিছে মরি' মরি'
+ও মুখ হইতে কেতাব-গ্রন্থ নাও জোর করে কেড়ে,
+যাহারা আনিল গ্রন্থ-কেতাব সেই মানুষেরে মেরে
+পূজিছে গ্রন্থ ভণ্ডের দল!—মূর্খরা সব শোনো,
+মানুষ এনেছে গ্রন্থ;—গ্রন্থ আনেনি মানুষ কোনো!
+আদম দাউদ ঈসা মুসা ইব্রাহিম মোহাম্মদ
+কৃষ্ণ বুদ্ধ নানক কবীর,—বিশ্বের সম্পদ...`,
+                analysisBn: `মধ্যযুগের কবি চণ্ডীদাসের ‘সবার উপরে মানুষ সত্য তাহার উপরে নাই’ বাণীরই আধুনিক মহাকাব্যিক প্রতিধ্বনি কাজী নজরুল ইসলামের ‘মানুষ’ কবিতা: “মানুষের চেয়ে বড় কিছু নাই, নহে কিছু মহীয়ান!”।
+
+কবিতাটিতে সাত দিন ধরে অভুক্ত এক মুসাফিরের কাহিনির মাধ্যমে ধর্মব্যবসায়ী পূজারী ও মোল্লার নিষ্ঠুর স্বার্থপরতা তুলে ধরা হয়েছে। মসজিদে প্রচুর শিরনি (গোশত-রুটি) বেঁচে যাওয়া সত্ত্বেও মোল্লা সাহেব নামাজ না পড়ার অজুহাতে ক্ষুধার্ত মুসাফিরকে ‘গো-ভাগাড়ে গিয়ে মর’ বলে তাড়িয়ে দেয় এবং গোশত-রুটি নিয়ে মসজিদে তালা লাগায়। তখন সেই বৃদ্ধ মুসাফিরের আক্ষেপের মধ্য দিয়েই প্রকাশ পায় স্রষ্টার প্রকৃত পরিচয়: “আশিটা বছর কেটে গেল, আমি ডাকিনি তোমায় কভু, / আমার ক্ষুধার অন্ন তা' বলে বন্ধ করনি প্রভু।”
+
+কবিতার শেষভাগে নজরুল মানবতাবিরোধী ভণ্ডদের উদ্দেশ্যে উচ্চারণ করেন বাংলা সাহিত্যের অন্যতম শ্রেষ্ঠ চরণ: মানুষকে ঘৃণা করে এবং মানুষকে হত্যা করে যারা কোরআন, বেদ ও বাইবেল চুম্বন করার ভান করে, তাদের মুখ থেকে পবিত্র গ্রন্থ কেড়ে নেওয়া উচিত—কারণ “মানুষ এনেছে গ্রন্থ;—গ্রন্থ আনেনি মানুষ কোনো!”`,
+                analysisEn: `Kazi Nazrul Islam's "Manush" (The Human Being) is the ultimate modern sequel to Chandidas's medieval declaration, opening with the immortal lines: "I sing the song of equality—There is nothing greater than a human being, nothing more noble!"
+
+Through the poignant parable of a traveler starving for seven days who is heartlessly turned away from both a temple and a mosque, Nazrul exposes how greedy priests and callous mullahs hijack houses of worship. When the mullah locks the mosque doors to hoard leftover meat and bread because the starving old man has not performed ritual prayers, the traveler utters a truth that shakes heaven and earth: "Eighty years have passed and I never called upon You, O Lord, yet You never stopped providing food for my hunger! Today, inside Your mosque and temple, human beings have no claim—the mullahs and priests have locked all their doors!"
+
+Nazrul concludes with a thunderous rebuke to hypocrites who kiss the Quran, Vedas, and Bible while hating and killing living human beings: "Listen, all you fools: Humanity brought the scriptures; no scripture ever brought humanity!"`
+            }
+        ];
+
+        // ---------------------------------------------------------
+        // 4. UI TRANSLATION DICTIONARY (শুধু বাংলা vs English)
+        // ---------------------------------------------------------
+        const UI_TEXT = {
+            bn: {
+                navTitle: 'মানবতার কাব্য ও গান',
+                navSubtitle: 'চণ্ডীদাস • ফকির লালন শাহ • কাজী নজরুল ইসলাম',
+                btnIndexText: 'সূচিপত্র',
+                heroBadge: 'চণ্ডীদাস, লালন ও নজরুলের মানবতাবাদী দর্শন ও সাহিত্য সংকলন',
+                heroHeading: '“সবার উপরে মানুষ সত্য, তাহার উপরে নাই”',
+                heroDesc: 'মধ্যযুগের চণ্ডীদাস থেকে শুরু করে বাউল সম্রাট ফকির লালন শাহ এবং বিদ্রোহী কবি কাজী নজরুল ইসলাম—বাংলা সাহিত্যের এই তিন মহাপ্রাণ মানুষের হৃদয়কেই স্রষ্টার পবিত্রতম মন্দির ও মসজিদ বলে ঘোষণা করেছেন। নিচে আলোচিত ১৫টি অমর পদ, গান ও কবিতার মূল পাঠ এবং গভীর দার্শনিক ব্যাখ্যা ও বিশ্লেষণ তুলে ধরা হলো।',
+                quoteAuthor1: '— কবি চণ্ডীদাস (১টি অমর পদ)',
+                quoteAuthor2: '— ফকির লালন শাহ (৮টি তত্ত্বগান)',
+                quoteAuthor3: '— কাজী নজরুল ইসলাম (৬টি কবিতা ও গান)',
+                poetsHeading: 'মহান তিন কবি ও সাধক পরিচিতি',
+                poetsSubheading: 'যেকোনো কবির কার্ডে ক্লিক করলে তাঁর রচিত পদ, গান বা কবিতাগুলো আলাদাভাবে দেখা যাবে',
+                btnResetPoet: 'সকল কবির রচনা একসাথে দেখুন (১৫টি) →',
+                tabAll: 'সকল রচনা (১৫)',
+                tabChandidas: 'কবি চণ্ডীদাস (১)',
+                tabLalon: 'ফকির লালন শাহ (৮)',
+                tabNazrul: 'কাজী নজরুল ইসলাম (৬)',
+                searchPlaceholder: 'কবিতা, চরণ বা বিষয় খুঁজুন...',
+                optThemeAll: 'সকল তত্ত্ব ও বিষয়',
+                optThemeHumanism: 'মানবধর্ম ও সাম্যবাদ',
+                optThemeSelf: 'আত্মতত্ত্ব ও আত্মোপলব্ধি',
+                optThemeBody: 'দেহতত্ত্ব ও রূপক',
+                optThemeAntifanatic: 'গোঁড়ামি ও জাতপাত বিরোধী',
+                mobileFontLabel: 'ফন্ট:',
+                verseLabel: 'মূল পদ / কবিতা / গানের বাণী',
+                analysisLabel: 'ব্যাখ্যা ও দার্শনিক বিশ্লেষণ',
+                btnCopy: 'কপি করুন',
+                btnReadModal: 'বড় পর্দায় পড়ুন',
+                videoTimePrefix: 'ভিডিও সময়:',
+                filterByPoetBtn: 'কবির রচনা দেখুন',
+                emptyTitle: 'কোনো কবিতা বা গান খুঁজে পাওয়া যায়নি',
+                emptyDesc: 'অন্য কোনো শব্দ দিয়ে খুঁজুন অথবা ফিল্টার রিসেট করুন।',
+                emptyResetBtn: 'সকল ফিল্টার মুছে ফেলুন',
+                modalIndexTitle: 'সম্পূর্ণ সূচিপত্র (১৫টি পদ, গান ও কবিতা)',
+                modalIndexSubtitle: 'যেকোনো শিরোনামে ক্লিক করলে সরাসরি সেই কবিতা ও বিশ্লেষণে নিয়ে যাবে',
+                thTitle: 'কবিতা / গানের শিরোনাম',
+                thPoet: 'কবি / গীতিকার',
+                thGenre: 'ধরন / উৎস',
+                thTime: 'ভিডিও টাইমস্ট্যাম্প',
+                readerPrev: '← পূর্ববর্তী রচনা',
+                readerNext: 'পরবর্তী রচনা →',
+                toastCopied: 'কবিতা ও বিশ্লেষণ ক্লিপবোর্ডে কপি করা হয়েছে!',
+                footerLeft: 'মানবতার কাব্য ও গান সংকলন • কবি চণ্ডীদাস, ফকির লালন শাহ ও কাজী নজরুল ইসলাম',
+                footerTop: 'উপরে যান ↑',
+                synthesisTitle: 'তুলনামূলক দার্শনিক মেলবন্ধন: চণ্ডীদাস, লালন ও নজরুল',
+                synthesisIntro: 'ভিডিওর মূল আলোচনায় দেখানো হয়েছে যে, কাব্যিক রূপক ও আধ্যাত্মিক দেহতত্ত্বকে আক্ষরিক অর্থে বিচার করলে বাংলা সাহিত্যের শ্রেষ্ঠ মানবতাবাদী কবিদের দর্শনকে ভুল বোঝা হয়। নিচে এই তিন মহান সাধক-কবির চিন্তার অপূর্ব ঐক্য তুলে ধরা হলো:',
+                synthesisItems: [
+                    {
+                        title: '১. মানুষের হৃদয়ই স্রষ্টার শ্রেষ্ঠ নিকেতন',
+                        desc: 'চণ্ডীদাস বলেছেন মানুষের সেবা বিনে সবই ছারখার; লালন মানবদেহকে বলেছেন ‘আদি মক্কা’ ও ‘দেহভুবন’; আর কাজী নজরুল ইসলাম ‘সাম্যবাদী’ কবিতায় মানুষের হৃদয়কেই ঘোষণা করেছেন কাবা, মদিনা, কাশী, বৃন্দাবন ও জেরুজালেম।'
+                    },
+                    {
+                        title: '২. আত্মোপলব্ধি ও রূপকের ভাষা',
+                        desc: 'লালন বলেছেন ‘একবার আপনারে চিনলে পরে যায় অচেনারে চেনা’ এবং দেহকে বলেছেন ‘সাড়ে নয় দরজার ঘর’। নজরুলও ‘বিদ্রোহী’ কবিতায় বলেছেন ‘আমি চিনেছি আমারে’ এবং অন্যায়ের বিরুদ্ধে বিদ্রোহ প্রকাশে ‘আরশ ছেদিয়া’ ওঠার কাব্যিক রূপক ব্যবহার করেছেন।'
+                    },
+                    {
+                        title: '৩. জাতপাত ও ধর্মব্যবসার বিরুদ্ধে বিদ্রোহ',
+                        desc: 'লালন প্রশ্ন তুলেছেন সুন্নত বা পৈতা দিয়ে পুরুষ চেনা গেলে নারীকে চেনার বিধান কী? নজরুলও ‘জাতের নামে বজ্জাতি’, ‘মানুষ’ এবং ‘গোঁড়ামি ধর্ম নয়’ কবিতায় ভণ্ড মোল্লা-পুরোহিতদের স্বার্থপরতা ও সাম্প্রদায়িক বিষবাষ্পের মুখোশ উন্মোচন করেছেন।'
+                    }
+                ]
+            },
+            en: {
+                navTitle: 'Anthology of Humanist Poetry & Songs',
+                navSubtitle: 'Chandidas • Fakir Lalon Shah • Kazi Nazrul Islam',
+                btnIndexText: 'Index Table',
+                heroBadge: 'Humanist Philosophy & Literary Anthology of Chandidas, Lalon & Nazrul',
+                heroHeading: '“Above All Else, Humanity is the Highest Truth”',
+                heroDesc: 'From the medieval Vaishnava lyricist Chandidas to the mystic Baul emperor Fakir Lalon Shah and Rebel Poet Kazi Nazrul Islam—these three literary titans proclaimed the human heart as the holiest sanctuary of the Divine. Explore all 15 immortal poems and songs with their original Bengali verses and in-depth philosophical analyses.',
+                quoteAuthor1: '— Poet Chandidas (1 Immortal Pad)',
+                quoteAuthor2: '— Fakir Lalon Shah (8 Mystic Songs)',
+                quoteAuthor3: '— Kazi Nazrul Islam (6 Poems & Songs)',
+                poetsHeading: 'Profiles of the Three Great Poets & Mystics',
+                poetsSubheading: 'Click on any poet card below to filter the anthology by their works',
+                btnResetPoet: 'Show All 15 Works Together →',
+                tabAll: 'All Works (15)',
+                tabChandidas: 'Chandidas (1)',
+                tabLalon: 'Fakir Lalon Shah (8)',
+                tabNazrul: 'Kazi Nazrul Islam (6)',
+                searchPlaceholder: 'Search poems, Bengali verses, or themes...',
+                optThemeAll: 'All Philosophical Themes',
+                optThemeHumanism: 'Humanism & Egalitarianism',
+                optThemeSelf: 'Self-Realization (Atma-tattva)',
+                optThemeBody: 'Mystic Body & Allegory (Deha-tattva)',
+                optThemeAntifanatic: 'Anti-Fanaticism & Anti-Caste',
+                mobileFontLabel: 'Font:',
+                verseLabel: 'Original Bengali Text (মূল বাংলা পাঠ)',
+                analysisLabel: 'Literary Explanation & Philosophical Analysis',
+                btnCopy: 'Copy Text',
+                btnReadModal: 'Focus Reader',
+                videoTimePrefix: 'Video Timestamp:',
+                filterByPoetBtn: 'Filter by Poet',
+                emptyTitle: 'No Matching Poems or Songs Found',
+                emptyDesc: 'Try searching with a different keyword or reset the active filters.',
+                emptyResetBtn: 'Reset All Filters',
+                modalIndexTitle: 'Complete Quick-Reference Index (All 15 Works)',
+                modalIndexSubtitle: 'Click on any row to jump directly to that poem and its detailed analysis',
+                thTitle: 'Poem / Song Title',
+                thPoet: 'Poet / Lyricist',
+                thGenre: 'Genre / Source',
+                thTime: 'Video Timestamp',
+                readerPrev: '← Previous Work',
+                readerNext: 'Next Work →',
+                toastCopied: 'Poem and analysis copied to clipboard!',
+                footerLeft: 'Humanist Poetry & Songs Anthology • Chandidas, Fakir Lalon Shah & Kazi Nazrul Islam',
+                footerTop: 'Back to Top ↑',
+                synthesisTitle: 'Comparative Philosophical Synthesis: Chandidas, Lalon & Nazrul',
+                synthesisIntro: 'As demonstrated in the video analysis, judging mystic allegory and poetic metaphor through rigid literalism leads to a profound misunderstanding of Bengali literary heritage. Below is the philosophical unity connecting these three master poets:',
+                synthesisItems: [
+                    {
+                        title: '1. The Human Heart as the Supreme Sanctuary',
+                        desc: 'Chandidas declared that without serving humanity all rituals are futile; Lalon described the human body as the "Adi Mecca" fashioned by Divine Light; and Kazi Nazrul Islam proclaimed in "Samyabadi" that the human heart itself is the Kaaba, Medina, Kashi, and Jerusalem.'
+                    },
+                    {
+                        title: '2. Self-Realization & Poetic Metaphor',
+                        desc: 'Lalon sang "Once you know yourself, you know the Unknown" and allegorized the body as a "house with nine-and-a-half doors." Nazrul echoed in "Bidrohi": "I have known myself, today all my fetters are broken!" using cosmic metaphors to celebrate the awakened human spirit.'
+                    },
+                    {
+                        title: '3. Rebellion Against Caste & Religious Hypocrisy',
+                        desc: 'Lalon questioned how circumcision or sacred threads could define spiritual identity when women bear neither mark. Nazrul expanded this critique in "Jater Name Bajjati", "Manush", and "Gorami Dhormo Noy", exposing how self-serving hypocrites lock God’s houses against starving humans.'
+                    }
+                ]
+            }
+        };
+
+        // ---------------------------------------------------------
+        // 5. APPLICATION STATE
+        // ---------------------------------------------------------
+        let currentLang = 'bn'; // 'bn' ("শুধু বাংলা") or 'en' ("English")
+        let selectedPoet = 'all'; // 'all', 'chandidas', 'lalon', 'nazrul'
+        let selectedTheme = 'all'; // 'all', 'humanism', 'self', 'body', 'antifanatic'
+        let searchQuery = '';
+        let currentLayout = 'grid'; // 'grid' or 'reader'
+        let activeModalPoemId = 1;
+
+        // Helper to convert English digits to Bengali digits when in 'bn' mode
+        function toBnDigits(str) {
+            const enToBn = {'0':'০','1':'১','2':'২','3':'৩','4':'৪','5':'৫','6':'৬','7':'৭','8':'৮','9':'৯'};
+            return String(str).replace(/[0-9]/g, d => enToBn[d] || d);
+        }
+
+        // ---------------------------------------------------------
+        // 6. RENDERING FUNCTIONS
+        // ---------------------------------------------------------
+        function updateStaticLabels() {
+            const t = UI_TEXT[currentLang];
+            document.documentElement.lang = currentLang === 'bn' ? 'bn' : 'en';
+
+            document.getElementById('nav-title').textContent = t.navTitle;
+            document.getElementById('nav-subtitle').textContent = t.navSubtitle;
+            document.getElementById('btn-index-text').textContent = t.btnIndexText;
+            document.getElementById('hero-badge').textContent = t.heroBadge;
+            document.getElementById('hero-heading').textContent = t.heroHeading;
+            document.getElementById('hero-description').textContent = t.heroDesc;
+            document.getElementById('quote-author-1').textContent = t.quoteAuthor1;
+            document.getElementById('quote-author-2').textContent = t.quoteAuthor2;
+            document.getElementById('quote-author-3').textContent = t.quoteAuthor3;
+
+            document.getElementById('poets-heading').textContent = t.poetsHeading;
+            document.getElementById('poets-subheading').textContent = t.poetsSubheading;
+            document.getElementById('btn-reset-poet').textContent = t.btnResetPoet;
+
+            // Tabs
+            const tabButtons = document.querySelectorAll('.poet-tab');
+            tabButtons.forEach(btn => {
+                const p = btn.getAttribute('data-poet');
+                if (p === 'all') btn.textContent = t.tabAll;
+                if (p === 'chandidas') btn.textContent = t.tabChandidas;
+                if (p === 'lalon') btn.textContent = t.tabLalon;
+                if (p === 'nazrul') btn.textContent = t.tabNazrul;
+            });
+
+            document.getElementById('search-input').placeholder = t.searchPlaceholder;
+            document.getElementById('opt-theme-all').textContent = t.optThemeAll;
+            document.getElementById('opt-theme-humanism').textContent = t.optThemeHumanism;
+            document.getElementById('opt-theme-self').textContent = t.optThemeSelf;
+            document.getElementById('opt-theme-body').textContent = t.optThemeBody;
+            document.getElementById('opt-theme-antifanatic').textContent = t.optThemeAntifanatic;
+            document.getElementById('mobile-font-label').textContent = t.mobileFontLabel;
+
+            document.getElementById('empty-title').textContent = t.emptyTitle;
+            document.getElementById('empty-desc').textContent = t.emptyDesc;
+            document.getElementById('empty-reset-btn').textContent = t.emptyResetBtn;
+
+            document.getElementById('modal-index-title').textContent = t.modalIndexTitle;
+            document.getElementById('modal-index-subtitle').textContent = t.modalIndexSubtitle;
+            document.getElementById('th-title').textContent = t.thTitle;
+            document.getElementById('th-poet').textContent = t.thPoet;
+            document.getElementById('th-genre').textContent = t.thGenre;
+            document.getElementById('th-time').textContent = t.thTime;
+
+            document.getElementById('reader-prev-btn').textContent = t.readerPrev;
+            document.getElementById('reader-next-btn').textContent = t.readerNext;
+            document.getElementById('reader-copy-btn').textContent = t.btnCopy;
+
+            document.getElementById('footer-left').textContent = t.footerLeft;
+            document.getElementById('footer-top-link').textContent = t.footerTop;
+
+            // Synthesis Section
+            document.getElementById('synthesis-title').textContent = t.synthesisTitle;
+            document.getElementById('synthesis-intro').textContent = t.synthesisIntro;
+            const synthContainer = document.getElementById('synthesis-cards');
+            synthContainer.innerHTML = t.synthesisItems.map(item => `
+                <div class="p-5 rounded-2xl bg-white/90 dark:bg-stone-900/90 border border-amber-200/80 dark:border-stone-700 shadow-sm">
+                    <h4 class="serif-heading font-bold text-base sm:text-lg text-stone-900 dark:text-amber-200 mb-2">${item.title}</h4>
+                    <p class="analysis-text text-stone-600 dark:text-stone-300 text-sm leading-relaxed">${item.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        function renderPoetProfiles() {
+            const container = document.getElementById('poets-grid');
+            const isBn = currentLang === 'bn';
+
+            container.innerHTML = Object.values(POETS_DATA).map(poet => {
+                const isSelected = selectedPoet === poet.id;
+                const name = isBn ? poet.nameBn : poet.nameEn;
+                const subName = isBn ? '' : `<span class="text-xs font-normal text-stone-500 dark:text-stone-400 block">${poet.nameBn}</span>`;
+                const era = isBn ? poet.eraBn : poet.eraEn;
+                const role = isBn ? poet.roleBn : poet.roleEn;
+                const bio = isBn ? poet.bioBn : poet.bioEn;
+                const count = isBn ? poet.countBn : poet.countEn;
+
+                return `
+                    <article
+                        onclick="filterByPoet('${poet.id}')"
+                        class="cursor-pointer group relative rounded-3xl p-5 bg-white dark:bg-stone-900 border-2 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-xl ${isSelected ? 'border-terracotta-600 dark:border-amber-400 ring-2 ring-terracotta-500/20' : 'border-stone-200/90 dark:border-stone-800 hover:border-amber-400'}"
+                    >
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shrink-0 border-2 border-amber-200 dark:border-stone-700 shadow-md bg-stone-100 dark:bg-stone-800">
+                                    <img
+                                        src="${poet.imageUrl}"
+                                        alt="${name}"
+                                        onerror="this.onerror=null; this.src='${poet.fallbackSvg}';"
+                                        class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div class="min-w-0">
+                                    <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold border ${poet.badgeClass} mb-1">
+                                        ${count}
+                                    </span>
+                                    <h4 class="serif-heading text-lg sm:text-xl font-bold text-stone-900 dark:text-amber-100 truncate">
+                                        ${name}
+                                    </h4>
+                                    ${subName}
+                                    <p class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">${era}</p>
+                                </div>
+                            </div>
+                            <p class="text-xs font-semibold text-terracotta-600 dark:text-amber-400 mb-2">
+                                ${role}
+                            </p>
+                            <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+                                ${bio}
+                            </p>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs font-semibold text-stone-700 dark:text-stone-300 group-hover:text-terracotta-600 dark:group-hover:text-amber-400">
+                            <span>${UI_TEXT[currentLang].filterByPoetBtn}</span>
+                            <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        function getFilteredPoems() {
+            return POEMS_DATA.filter(item => {
+                const matchPoet = selectedPoet === 'all' || item.poetId === selectedPoet;
+                const matchTheme = selectedTheme === 'all' || item.theme === selectedTheme;
+                if (!matchPoet || !matchTheme) return false;
+
+                if (!searchQuery.trim()) return true;
+                const q = searchQuery.toLowerCase().trim();
+                const poet = POETS_DATA[item.poetId];
+                return (
+                    item.titleBn.toLowerCase().includes(q) ||
+                    item.titleEn.toLowerCase().includes(q) ||
+                    item.verses.toLowerCase().includes(q) ||
+                    item.analysisBn.toLowerCase().includes(q) ||
+                    item.analysisEn.toLowerCase().includes(q) ||
+                    poet.nameBn.toLowerCase().includes(q) ||
+                    poet.nameEn.toLowerCase().includes(q)
+                );
+            });
+        }
+
+        function renderPoems() {
+            const filtered = getFilteredPoems();
+            const container = document.getElementById('poems-container');
+            const emptyState = document.getElementById('empty-state');
+            const counter = document.getElementById('results-counter');
+            const isBn = currentLang === 'bn';
+            const t = UI_TEXT[currentLang];
+
+            // Update counter text
+            if (isBn) {
+                counter.textContent = `মোট ${toBnDigits(filtered.length)}টি অমর রচনা প্রদর্শিত হচ্ছে`;
+            } else {
+                counter.textContent = `Showing ${filtered.length} of ${POEMS_DATA.length} immortal works`;
+            }
+
+            if (filtered.length === 0) {
+                container.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+            emptyState.classList.add('hidden');
+
+            container.innerHTML = filtered.map(poem => {
+                const poet = POETS_DATA[poem.poetId];
+                const numDisplay = isBn ? `#${toBnDigits(poem.id)}` : `#${poem.id}`;
+                const titleDisplay = isBn ? poem.titleBn : poem.titleEn;
+                const subtitleBnInEn = !isBn ? `<p class="serif-heading text-sm sm:text-base font-medium text-amber-800 dark:text-amber-300 mt-0.5">${poem.titleBn}</p>` : '';
+                const poetName = isBn ? poet.nameBn : `${poet.nameEn} (${poet.nameBn})`;
+                const genre = isBn ? poem.genreBn : poem.genreEn;
+                const analysis = isBn ? poem.analysisBn : poem.analysisEn;
+                const timeText = isBn ? toBnDigits(poem.timestamp) : poem.timestamp;
+
+                // Format paragraphs of analysis nicely
+                const analysisParagraphs = analysis.split('\n\n').map(p => `<p class="mb-3 last:mb-0">${p.replace(/\n/g, '<br>')}</p>`).join('');
+
+                return `
+                    <article id="poem-card-${poem.id}" class="rounded-3xl bg-white dark:bg-stone-900 border border-amber-900/15 dark:border-stone-800 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden">
+                        
+                        <!-- Card Top Bar: Poet Info & Number Badge -->
+                        <div class="px-5 pt-5 pb-4 border-b border-stone-100 dark:border-stone-800/80 bg-gradient-to-r from-parchment-100/70 via-white to-parchment-50 dark:from-stone-900 dark:via-stone-900 dark:to-stone-800/60">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="flex items-center gap-3">
+                                    <img
+                                        src="${poet.imageUrl}"
+                                        alt="${poetName}"
+                                        onerror="this.onerror=null; this.src='${poet.fallbackSvg}';"
+                                        class="w-12 h-12 rounded-xl object-cover object-top border border-amber-300 dark:border-stone-700 shrink-0 shadow-sm bg-stone-100"
+                                    />
+                                    <div>
+                                        <div class="flex flex-wrap items-center gap-2">
+                                            <span class="px-2.5 py-0.5 rounded-lg text-xs font-bold bg-terracotta-600 text-white">
+                                                ${numDisplay}
+                                            </span>
+                                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-lg border ${poet.badgeClass}">
+                                                ${poetName}
+                                            </span>
+                                        </div>
+                                        <p class="text-xs text-stone-500 dark:text-stone-400 mt-1">
+                                            ${genre}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Video Timestamp Badge -->
+                                <span class="shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-medium bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 border border-stone-200 dark:border-stone-700" title="${t.videoTimePrefix} ${poem.timestamp}">
+                                    <svg class="w-3.5 h-3.5 text-terracotta-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+                                    ${timeText}
+                                </span>
+                            </div>
+
+                            <!-- Poem / Song Title -->
+                            <div class="mt-4">
+                                <h3 class="serif-heading text-xl sm:text-2xl font-bold text-stone-900 dark:text-amber-50 leading-snug">
+                                    ${titleDisplay}
+                                </h3>
+                                ${subtitleBnInEn}
+                            </div>
+                        </div>
+
+                        <!-- Card Body: Original Bengali Verses + Detailed Explanation -->
+                        <div class="p-5 sm:p-6 space-y-5 flex-grow flex flex-col justify-between">
+                            
+                            <!-- Original Verses Blockquote (Always in authentic Bengali script) -->
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-[11px] font-bold uppercase tracking-wider text-terracotta-600 dark:text-amber-400 flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-terracotta-500"></span>
+                                        ${t.verseLabel}
+                                    </span>
+                                </div>
+                                <div class="relative rounded-2xl bg-parchment-100/90 dark:bg-stone-950/90 p-4 sm:p-5 border-l-4 border-terracotta-500 dark:border-amber-500 shadow-inner">
+                                    <blockquote class="poem-verse text-stone-900 dark:text-amber-50/95 whitespace-pre-line font-medium select-all">${poem.verses}</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Explanation & Analysis (ব্যাখ্যা ও বিশ্লেষণ) -->
+                            <div class="rounded-2xl bg-amber-50/60 dark:bg-stone-800/50 p-4 sm:p-5 border border-amber-200/70 dark:border-stone-700/80">
+                                <div class="flex items-center gap-2 mb-2.5 text-teal-800 dark:text-teal-300 font-bold text-xs sm:text-sm">
+                                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                    </svg>
+                                    <span>${t.analysisLabel}</span>
+                                </div>
+                                <div class="analysis-text text-stone-700 dark:text-stone-200 leading-relaxed">
+                                    ${analysisParagraphs}
+                                </div>
+                            </div>
+
+                            <!-- Card Footer Actions -->
+                            <div class="pt-2 flex items-center justify-between gap-2 border-t border-stone-100 dark:border-stone-800">
+                                <button
+                                    onclick="openReaderModal(${poem.id})"
+                                    class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-200 hover:bg-amber-100 dark:hover:bg-stone-700 transition"
+                                >
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                    ${t.btnReadModal}
+                                </button>
+
+                                <button
+                                    onclick="copyPoemById(${poem.id})"
+                                    class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-terracotta-500/10 dark:bg-amber-500/10 text-terracotta-700 dark:text-amber-300 hover:bg-terracotta-600 hover:text-white dark:hover:bg-amber-500 dark:hover:text-stone-950 transition"
+                                >
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    ${t.btnCopy}
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        function renderIndexTable() {
+            const tbody = document.getElementById('index-table-body');
+            const isBn = currentLang === 'bn';
+
+            tbody.innerHTML = POEMS_DATA.map(poem => {
+                const poet = POETS_DATA[poem.poetId];
+                const num = isBn ? toBnDigits(poem.id) : poem.id;
+                const title = isBn ? poem.titleBn : `${poem.titleEn} (${poem.titleBn})`;
+                const poetName = isBn ? poet.nameBn : poet.nameEn;
+                const genre = isBn ? poem.genreBn : poem.genreEn;
+                const time = isBn ? toBnDigits(poem.timestamp) : poem.timestamp;
+
+                return `
+                    <tr onclick="jumpToPoem(${poem.id})" class="cursor-pointer hover:bg-amber-50/90 dark:hover:bg-stone-800/80 transition">
+                        <td class="py-3 px-3 font-bold text-terracotta-600 dark:text-amber-400">${num}</td>
+                        <td class="py-3 px-3 font-semibold text-stone-900 dark:text-stone-100">${title}</td>
+                        <td class="py-3 px-3 text-stone-700 dark:text-stone-300">${poetName}</td>
+                        <td class="py-3 px-3 text-stone-500 dark:text-stone-400">${genre}</td>
+                        <td class="py-3 px-3 font-mono text-xs text-stone-600 dark:text-stone-400">${time}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // ---------------------------------------------------------
+        // 7. INTERACTIVE HANDLERS (Language, Filters, Modals, Copy)
+        // ---------------------------------------------------------
+        function setLanguage(lang) {
+            currentLang = lang;
+            const btnBn = document.getElementById('btn-lang-bn');
+            const btnEn = document.getElementById('btn-lang-en');
+
+            if (lang === 'bn') {
+                btnBn.className = 'px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 bg-terracotta-600 text-white shadow-sm';
+                btnEn.className = 'px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white';
+            } else {
+                btnEn.className = 'px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 bg-terracotta-600 text-white shadow-sm';
+                btnBn.className = 'px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white';
+            }
+
+            updateStaticLabels();
+            renderPoetProfiles();
+            renderPoems();
+            renderIndexTable();
+
+            // If reader modal is open, refresh its content in the new language
+            const readerModal = document.getElementById('reader-modal');
+            if (!readerModal.classList.contains('hidden')) {
+                openReaderModal(activeModalPoemId);
+            }
+        }
+
+        function filterByPoet(poetId) {
+            selectedPoet = poetId;
+            // Update active tab styling
+            document.querySelectorAll('.poet-tab').forEach(btn => {
+                const isMatch = btn.getAttribute('data-poet') === poetId;
+                btn.className = isMatch
+                    ? 'poet-tab shrink-0 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-stone-900 text-white dark:bg-amber-500 dark:text-stone-950 shadow-sm'
+                    : 'poet-tab shrink-0 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-white/80 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-amber-100 dark:hover:bg-stone-700';
+            });
+
+            renderPoetProfiles();
+            renderPoems();
+        }
+
+        function handleThemeFilter(themeVal) {
+            selectedTheme = themeVal;
+            renderPoems();
+        }
+
+        function handleSearch(val) {
+            searchQuery = val;
+            const clearBtn = document.getElementById('clear-search-btn');
+            if (val.trim().length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+            renderPoems();
+        }
+
+        function clearSearch() {
+            const input = document.getElementById('search-input');
+            input.value = '';
+            handleSearch('');
+        }
+
+        function resetAllFilters() {
+            selectedPoet = 'all';
+            selectedTheme = 'all';
+            document.getElementById('theme-select').value = 'all';
+            clearSearch();
+            filterByPoet('all');
+        }
+
+        function setLayout(mode) {
+            currentLayout = mode;
+            const container = document.getElementById('poems-container');
+            const gridBtn = document.getElementById('layout-grid-btn');
+            const readerBtn = document.getElementById('layout-reader-btn');
+
+            if (mode === 'reader') {
+                container.className = 'grid grid-cols-1 max-w-4xl mx-auto gap-8';
+                readerBtn.className = 'p-1.5 rounded-lg bg-amber-100 dark:bg-stone-700 text-amber-900 dark:text-amber-300 transition';
+                gridBtn.className = 'p-1.5 rounded-lg text-stone-500 dark:text-stone-400 hover:text-stone-800 transition';
+            } else {
+                container.className = 'grid grid-cols-1 lg:grid-cols-2 gap-6';
+                gridBtn.className = 'p-1.5 rounded-lg bg-amber-100 dark:bg-stone-700 text-amber-900 dark:text-amber-300 transition';
+                readerBtn.className = 'p-1.5 rounded-lg text-stone-500 dark:text-stone-400 hover:text-stone-800 transition';
+            }
+        }
+
+        function setFontSize(size) {
+            document.body.classList.remove('scale-sm', 'scale-md', 'scale-lg');
+            document.body.classList.add(`scale-${size}`);
+
+            ['sm', 'md', 'lg'].forEach(s => {
+                const btn = document.getElementById(`font-${s}`);
+                if (!btn) return;
+                if (s === size) {
+                    btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-white dark:bg-stone-700 text-amber-700 dark:text-amber-300 shadow-sm transition';
+                } else {
+                    btn.className = 'px-2 py-1 rounded-lg text-xs font-bold text-stone-600 dark:text-stone-400 hover:bg-white dark:hover:bg-stone-700 transition';
+                }
+            });
+        }
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function toggleIndexModal(show) {
+            const modal = document.getElementById('index-modal');
+            if (show) {
+                modal.classList.remove('hidden');
+            } else {
+                modal.classList.add('hidden');
+            }
+        }
+
+        function jumpToPoem(poemId) {
+            toggleIndexModal(false);
+            resetAllFilters();
+            setTimeout(() => {
+                const el = document.getElementById(`poem-card-${poemId}`);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    el.classList.add('ring-4', 'ring-terracotta-500/50');
+                    setTimeout(() => el.classList.remove('ring-4', 'ring-terracotta-500/50'), 2200);
+                }
+            }, 100);
+        }
+
+        // Focused Reader Modal
+        function openReaderModal(poemId) {
+            activeModalPoemId = poemId;
+            const poem = POEMS_DATA.find(p => p.id === poemId);
+            if (!poem) return;
+
+            const poet = POETS_DATA[poem.poetId];
+            const isBn = currentLang === 'bn';
+            const t = UI_TEXT[currentLang];
+
+            document.getElementById('reader-badge').textContent = isBn ? `#${toBnDigits(poem.id)}` : `#${poem.id}`;
+            document.getElementById('reader-title').textContent = isBn ? poem.titleBn : poem.titleEn;
+            document.getElementById('reader-counter').textContent = isBn
+                ? `${toBnDigits(poem.id)} / ${toBnDigits(POEMS_DATA.length)}`
+                : `${poem.id} / ${POEMS_DATA.length}`;
+
+            const poetName = isBn ? poet.nameBn : `${poet.nameEn} (${poet.nameBn})`;
+            const genre = isBn ? poem.genreBn : poem.genreEn;
+            const analysis = isBn ? poem.analysisBn : poem.analysisEn;
+            const analysisParagraphs = analysis.split('\n\n').map(p => `<p class="mb-3 last:mb-0">${p.replace(/\n/g, '<br>')}</p>`).join('');
+
+            document.getElementById('reader-body').innerHTML = `
+                <div class="flex items-center gap-4 pb-4 border-b border-stone-200 dark:border-stone-800">
+                    <img
+                        src="${poet.imageUrl}"
+                        alt="${poetName}"
+                        onerror="this.onerror=null; this.src='${poet.fallbackSvg}';"
+                        class="w-16 h-16 rounded-2xl object-cover object-top border border-amber-300 dark:border-stone-700"
+                    />
+                    <div>
+                        <h4 class="serif-heading text-lg font-bold text-stone-900 dark:text-amber-200">${poetName}</h4>
+                        <p class="text-xs sm:text-sm text-stone-500 dark:text-stone-400">${genre}</p>
+                        <p class="text-xs text-terracotta-600 dark:text-amber-400 mt-0.5">${t.videoTimePrefix} ${poem.timestamp}</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-wider text-terracotta-600 dark:text-amber-400 mb-2">${t.verseLabel}</h5>
+                    <div class="rounded-2xl bg-parchment-100 dark:bg-stone-950 p-5 sm:p-6 border-l-4 border-terracotta-600 dark:border-amber-500">
+                        <blockquote class="poem-verse text-stone-900 dark:text-amber-50 whitespace-pre-line font-medium">${poem.verses}</blockquote>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl bg-amber-50/80 dark:bg-stone-800/70 p-5 sm:p-6 border border-amber-200 dark:border-stone-700">
+                    <h5 class="text-sm font-bold text-teal-800 dark:text-teal-300 mb-3">${t.analysisLabel}</h5>
+                    <div class="analysis-text text-stone-800 dark:text-stone-200 leading-relaxed">
+                        ${analysisParagraphs}
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('reader-modal').classList.remove('hidden');
+        }
+
+        function closeReaderModal() {
+            document.getElementById('reader-modal').classList.add('hidden');
+        }
+
+        function navigateModal(direction) {
+            let nextId = activeModalPoemId + direction;
+            if (nextId < 1) nextId = POEMS_DATA.length;
+            if (nextId > POEMS_DATA.length) nextId = 1;
+            openReaderModal(nextId);
+        }
+
+        function copyCurrentModalPoem() {
+            copyPoemById(activeModalPoemId);
+        }
+
+        // Clipboard Copy using document.execCommand('copy') for iframe compatibility
+        function copyPoemById(poemId) {
+            const poem = POEMS_DATA.find(p => p.id === poemId);
+            if (!poem) return;
+            const poet = POETS_DATA[poem.poetId];
+            const isBn = currentLang === 'bn';
+
+            const textToCopy = isBn
+                ? `${poem.titleBn}\nকবি: ${poet.nameBn}\n\n${poem.verses}\n\nব্যাখ্যা ও বিশ্লেষণ:\n${poem.analysisBn}`
+                : `${poem.titleEn} (${poem.titleBn})\nPoet: ${poet.nameEn}\n\n${poem.verses}\n\nExplanation & Analysis:\n${poem.analysisEn}`;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast(UI_TEXT[currentLang].toastCopied);
+            } catch (err) {
+                console.error('Copy failed', err);
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2600);
+        }
+
+        // Close modals on Escape key or backdrop click
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                toggleIndexModal(false);
+                closeReaderModal();
+            }
+        });
+
+        // Initialize Application on Load
+        window.onload = function () {
+            setLanguage('bn');
+        };
+    </script>
+</body>
+</html>
